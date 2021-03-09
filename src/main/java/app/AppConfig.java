@@ -2,6 +2,6 @@ package app;
 
 public class AppConfig {
 
-    public static final String baseUrl = "https://www.tutortime.com/";
+    public static final String baseUrl = "https://qa.tutortime.com/";
 
 }
