@@ -1,0 +1,8 @@
+2021-03-05 20:02:16,419 INFO  Sample info message 
+2021-03-05 20:02:16,419 WARN  Sample warn message 
+2021-03-05 20:02:16,419 ERROR Sample error message 
+2021-03-05 20:02:16,419 FATAL Sample fatal message 
+2021-03-07 13:59:27,169 INFO  Sample info message 
+2021-03-07 13:59:27,169 WARN  Sample warn message 
+2021-03-07 13:59:27,169 ERROR Sample error message 
+2021-03-07 13:59:27,170 FATAL Sample fatal message 
