@@ -2,8 +2,8 @@ import org.testng.annotations.Test;
 
 public class ExampleTest extends A_BaseTest
 {
-    @Test
-    public void loginViaEmail() {
+    @Test (enabled = false)
+    public void openOTSfromEyebrow() {
         app.loginPage.open();
         app.loginPage.login("tomsmith", "SuperSecretPassword!");
 
