@@ -51,8 +51,8 @@ public class openOTS extends A_BaseTest
         app.otsFrame.locationField.shouldBe(Condition.visible).sendKeys("TX");
         app.otsFrame.searchButton.shouldBe(Condition.enabled).click();
 
-        app.otsFrame.selectFirstSchoolButton.click();
-        app.otsFrame.nextConfirmSchoolButton.click();
+        app.otsFrame.selectFirstSchoolButton.shouldBe(Condition.visible).click();
+        app.otsFrame.nextConfirmSchoolButton.shouldBe(Condition.visible).click();
 
         Assert.assertEquals(app.otsFrame.selectTypeText.getText(), "Select an Appointment Type");
     }

@@ -1,6 +1,5 @@
 package helpers;
 
-import app.AppConfig;
 import com.codeborne.selenide.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -20,13 +19,13 @@ public class Driver {
     public static void initDriver() {
 
         // Get settings from command line
-
         TestConfig.initConfig();
 
-        // Set settings for selenide browser
 
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 15000;
+
+        // Set settings for selenide browser
+        Configuration.pageLoadStrategy = "normal"; //normal-eager-none
+        Configuration.timeout = 10000;
         //Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
         Configuration.screenshots = false;
@@ -49,6 +48,29 @@ public class Driver {
                 Configuration.browser = Browsers.CHROME;
                 break;
         }
+
+        switch (TestConfig.domain)
+        {
+            case "tutortime":
+                TestConfig.domain = "tutortime.com";
+                break;
+            case "lapetite":
+                TestConfig.domain = "lapetite.com";
+                break;
+        }
+
+        switch (TestConfig.env)
+        {
+            case "qa":
+                TestConfig.env = "https://qa.";
+                break;
+            case "stage":
+                TestConfig.env = "https://stage.";
+                break;
+        }
+
+        TestConfig.baseUrl = TestConfig.env+TestConfig.domain;
+
     }
 
     public static WebDriver currentDriver() {
@@ -94,7 +116,7 @@ public class Driver {
     }
 
     public static void clearCookies() {
-        open(AppConfig.baseUrl);
+        open(TestConfig.baseUrl);
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
     }
