@@ -25,7 +25,7 @@ public class Driver {
 
         // Set settings for selenide browser
         Configuration.pageLoadStrategy = "normal"; //normal-eager-none
-        Configuration.timeout = 10000;
+        Configuration.timeout = 30000;
         //Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
         Configuration.screenshots = false;
@@ -51,10 +51,10 @@ public class Driver {
 
         switch (TestConfig.domain)
         {
-            case "tutortime":
+            case "tt":
                 TestConfig.domain = "tutortime.com";
                 break;
-            case "lapetite":
+            case "lpa":
                 TestConfig.domain = "lapetite.com";
                 break;
         }

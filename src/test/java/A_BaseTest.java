@@ -6,6 +6,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 class A_BaseTest {
@@ -13,11 +14,15 @@ class A_BaseTest {
     protected App app;
     protected SoftAssert softAssert;
     protected Logger logger;
+    protected String otsStartLocation;
 
     @BeforeClass
-    public void setUp() {
+    @Parameters("otsStartLocation")
+    public void setUp(String otsStartLocation) {
 
         Driver.initDriver();
+
+        this.otsStartLocation = otsStartLocation;
 
         app = new App();
         softAssert = new SoftAssert();

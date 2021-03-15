@@ -9,7 +9,19 @@ public class TestConfig {
     public static String baseUrl = "https://qa.tutortime.com/";
 
     public static void initConfig() {
-        //mvn test -Dbrowser=chrome -Dheadless=0 -Ddomain=lapetite -Denvir=qa
+        /*mvn test -Dbrowser=chrome
+                   -Dheadless=0
+                   -Ddomain=lpa
+                   -Denv=qa
+                   -DsuiteXmlFile=src/test/resources/testng.xml
+
+          mvn test -Dbrowser=chrome
+                   -Dheadless=0
+                   -Ddomain=tt
+                   -Denv=qa
+                   -DsuiteXmlFile=target/surefire-reports/testng-failed.xml
+
+         */
 
         browser = System.getProperty("browser") == null ? "chrome" : System.getProperty("browser");
         headless = System.getProperty("headless") == null ? "0" : System.getProperty("headless");

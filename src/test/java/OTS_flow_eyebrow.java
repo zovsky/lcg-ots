@@ -4,13 +4,14 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class openOTS extends A_BaseTest
+public class OTS_flow_eyebrow extends A_BaseTest
 {
 
     @Test (enabled = true)
     public void searchForLocation() {
+
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -27,7 +28,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void selectSchoolFromList() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -44,7 +45,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void confirmSelectedSchool() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -60,7 +61,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void selectVirtualTour() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -78,7 +79,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void selectInPersonTour() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -96,7 +97,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void selectDateAndTime() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 
@@ -123,7 +124,7 @@ public class openOTS extends A_BaseTest
     @Test (enabled = true)
     public void fillForm() {
         app.homePage.open();
-        app.homePage.otsEyebrow.click();
+//        app.homePage.otsEyebrow.click();
 
         app.otsFrame.switchToFrame();
 

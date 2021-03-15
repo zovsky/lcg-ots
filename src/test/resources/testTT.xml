@@ -7,8 +7,9 @@
     </listeners>
 
     <test name="Eyebrow">
+        <parameter name="otsStartLocation" value="eyebrow" />
         <classes>
-            <class name="OTS_flow_eyebrow" />
+            <class name="OTS_flow" />
         </classes>
     </test>
 </suite>
