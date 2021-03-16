@@ -12,4 +12,12 @@
             <class name="OTS_flow" />
         </classes>
     </test>
+
+    <test name="NavUtil">
+        <parameter name="otsStartLocation" value="navutil" />
+        <classes>
+            <class name="OTS_flow" />
+        </classes>
+    </test>
+
 </suite>

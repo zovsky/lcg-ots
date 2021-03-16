@@ -32,7 +32,7 @@ public class App {
             case "eyebrow":
                 eyeBrow.otsEyebrow.click();
                 break;
-            case "navutility":
+            case "navutil":
                 navUtility.otsNavUtility.click();
                 break;
             default:

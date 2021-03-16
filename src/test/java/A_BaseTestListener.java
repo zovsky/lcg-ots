@@ -6,8 +6,7 @@ public class A_BaseTestListener implements ITestListener {
 
 
     @Override
-    public void onTestStart(ITestResult TestResult) {
-
+    public void onTestStart(ITestResult result) {
     }
 
     @Override
@@ -16,9 +15,7 @@ public class A_BaseTestListener implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult TestResult)
-    {
-
+    public void onTestFailure(ITestResult result) {
     }
 
     @Override

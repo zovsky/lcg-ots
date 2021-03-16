@@ -9,11 +9,7 @@ public class TestConfig {
     public static String baseUrl = "https://qa.tutortime.com/";
 
     public static void initConfig() {
-        /*mvn test -Dbrowser=chrome
-                   -Dheadless=0
-                   -Ddomain=lpa
-                   -Denv=qa
-                   -DsuiteXmlFile=src/test/resources/testng.xml
+        /*mvn clean test -Dbrowser=chrome -Dheadless=0 -Ddomain=tt -Denv=qa -DsuiteXmlFile=testTT.xml
 
           mvn test -Dbrowser=chrome
                    -Dheadless=0

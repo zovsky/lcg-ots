@@ -1,12 +1,10 @@
 package app.pages;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.TestConfig;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -48,12 +46,46 @@ public class OTSframe {
     public SelenideElement selectTypeText = $(".ots-form-panel-99").$(By.tagName("h3"));
     public SelenideElement virtualTourButton = $("#VirtualTourHeader");
     public SelenideElement inPersonTourButton = $("#InPersonTourHeader");
+    public static String step4ExpectedText;
+    public static String getStep4ExpectedText() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+            step4ExpectedText = "Tutor Time of Austin, TX";
+            break;
+        }
+        return step4ExpectedText;
+    }
+
+    public void selectVirtualTour() {
+        virtualTourButton.click();
+    }
+    public void selectInPersonTour() {
+        inPersonTourButton.click();
+    }
 
     //step5 calendar
     public SelenideElement selectedSchoolName = $$(".selected-school-name").first();
     public SelenideElement tomorrow = $$("a.ui-state-default").get(1);
     public SelenideElement secondTimeslot = $$("a.timeslot").get(1);
     public SelenideElement nextButtonCalendar = $("#date-time-form").$(".backNextWrapper").$(".nextLink");
+    public static String step5ExpectedText;
+    public void selectTomorrow() {
+        tomorrow.click();
+    }
+    public void selectSecondTimeslot() {
+        secondTimeslot.click();
+    }
+    public void clickNextButtonCalendar() {
+        nextButtonCalendar.click();
+    }
+    public static String getStep5ExpectedText() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                step5ExpectedText = "To confirm and schedule your Tutor Time of Austin, TX";
+                break;
+        }
+        return step5ExpectedText;
+    }
 
     //step6 form
     public SelenideElement instructions = $(".instructions");
@@ -64,6 +96,32 @@ public class OTSframe {
     public SelenideElement child1Name = $("#child1fName");
     public SelenideElement child1bDay = $("#child1bDay");
     public SelenideElement submitButton = $("#Panel5SubmitBtn");
+    public static String emailAddress;
+    public void fillOTSForm() {
+        firstName.sendKeys("first");
+        lastName.sendKeys("last");
+        phone.sendKeys("6574342222");
+        email.sendKeys(getEmailAddress());
+        child1Name.sendKeys("name");
+        sleep(1000);
+        typeDate("11112011");
+        submitButton.click();
+        sleep(1000);
+    }
+    public void typeDate(String string) {
+        for (char i : string.toCharArray()) {
+            child1bDay.sendKeys("" + i);
+            sleep(10);
+        }
+    }
+    public static String getEmailAddress() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                emailAddress = "VALIDTT@EXAMPLE.COM";
+                break;
+        }
+        return emailAddress;
+    }
 
     public SelenideElement thankYou = $(".confirmation-panel").$(By.tagName("h2"));
 
@@ -71,12 +129,5 @@ public class OTSframe {
 
     public void switchToFrame() {
         Selenide.switchTo().frame("iFrameResizer0");
-    }
-
-    public void typeDate(String string) {
-        for (char i : string.toCharArray()) {
-            child1bDay.sendKeys("" + i);
-            sleep(10);
-        }
     }
 }
