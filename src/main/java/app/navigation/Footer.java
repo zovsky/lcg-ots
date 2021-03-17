@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Footer {
 
-    public SelenideElement otsFooter;// = $(".util-nav").$(".tour");
+    public SelenideElement otsFooter = $("#footer").$(".scheduleLink");
 
     public Footer() {
 

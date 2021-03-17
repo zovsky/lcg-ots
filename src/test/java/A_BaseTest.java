@@ -1,11 +1,8 @@
 import app.App;
 import helpers.Driver;
-import helpers.Retry;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
-import org.testng.ITestContext;
-import org.testng.ITestNGMethod;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +18,7 @@ class A_BaseTest {
 
     @BeforeClass
     @Parameters("otsStartLocation")
-    public void setUp(String otsStartLocation, ITestContext context) {
+    public void setUp(String otsStartLocation) {
 
         Driver.initDriver();
 

@@ -54,8 +54,32 @@ public class Driver {
             case "tt":
                 TestConfig.domain = "tutortime.com";
                 break;
+            case "pla":
+                TestConfig.domain = "pathwayslearningacademy.com";
+                break;
+            case "mu":
+                TestConfig.domain = "montessori.com";
+                break;
             case "lpa":
                 TestConfig.domain = "lapetite.com";
+                break;
+            case "ea":
+                TestConfig.domain = "everbrookacademy.com";
+                break;
+            case "ck":
+                TestConfig.domain = "creativekidslearningcenter.com";
+                break;
+            case "ct":
+                TestConfig.domain = "childtime.com";
+                break;
+            case "ccy":
+                TestConfig.domain = "childrenscourtyard.com";
+                break;
+            case "ug":
+                TestConfig.domain = "u-gro.com";
+                break;
+            case "lcg":
+                TestConfig.domain = "learningcaregroup.com";
                 break;
         }
 
@@ -67,9 +91,13 @@ public class Driver {
             case "stage":
                 TestConfig.env = "https://stage.";
                 break;
+//            case "prod":
+//                TestConfig.env = "https://www.";
+//                break;
         }
 
         TestConfig.baseUrl = TestConfig.env+TestConfig.domain;
+        //todo Spanish
 
     }
 

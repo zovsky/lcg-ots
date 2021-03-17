@@ -14,7 +14,6 @@ public class OTSframe {
     public SelenideElement locationField = $("#location");
     public SelenideElement panelText = $(".panel-text");
     public SelenideElement searchButton = $("#Panel1SubmitBtn");
-
     public void searchForLocation () {
         switch (TestConfig.domain) {
             case "tutortime.com":
@@ -22,7 +21,6 @@ public class OTSframe {
                 break;
         }
     }
-
     public void clickSearchButton() {
         searchButton.shouldBe(Condition.enabled).click();
     }
@@ -55,11 +53,11 @@ public class OTSframe {
         }
         return step4ExpectedText;
     }
-
     public void selectVirtualTour() {
         virtualTourButton.click();
     }
     public void selectInPersonTour() {
+        sleep(1000);
         inPersonTourButton.click();
     }
 
@@ -97,7 +95,7 @@ public class OTSframe {
     public SelenideElement child1bDay = $("#child1bDay");
     public SelenideElement submitButton = $("#Panel5SubmitBtn");
     public static String emailAddress;
-    public void fillOTSForm() {
+    public void fillOTSFormAndSubmit() {
         firstName.sendKeys("first");
         lastName.sendKeys("last");
         phone.sendKeys("6574342222");

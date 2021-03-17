@@ -11,7 +11,6 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult TestResult) {
-
     }
 
     @Override
@@ -20,22 +19,17 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult TestResult) {
-
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult TestResult) {
-
     }
 
     @Override
     public void onStart(ITestContext TestContext) {
-
     }
 
     @Override
     public void onFinish(ITestContext TestContext) {
-
     }
-
 }

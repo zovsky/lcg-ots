@@ -8,8 +8,6 @@ public class NavUtility {
 
     public SelenideElement otsNavUtility = $(".util-nav").$(".tour");
 
-    public SelenideElement otsFooter;// = $(".util-nav").$(".tour");
-
     public NavUtility() {
 
     }

@@ -1,0 +1,84 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="OTSAutoTests" verbose="1">
+
+    <listeners>
+        <listener class-name="A_BaseTestListener"/>
+    </listeners>
+
+    <test name="Eyebrow">
+        <parameter name="otsStartLocation" value="eyebrow" />
+        <classes>
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--&lt;!&ndash;                    <include name="t02_selectSchoolFromList" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t03_confirmSelectedSchool" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t04_selectVirtualTour" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t05_selectInPersonTour" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+
+<!--    <test name="NavUtil">-->
+<!--        <parameter name="otsStartLocation" value="navutil" />-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="OTS_flow" >&ndash;&gt;-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t01_searchForLocation" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t02_selectSchoolFromList" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t03_confirmSelectedSchool" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t04_selectVirtualTour" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t05_selectInPersonTour" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--&lt;!&ndash;            </class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Footer">-->
+<!--        <parameter name="otsStartLocation" value="footer" />-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="OTS_flow" >&ndash;&gt;-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t01_searchForLocation" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t02_selectSchoolFromList" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t03_confirmSelectedSchool" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t04_selectVirtualTour" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t05_selectInPersonTour" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--&lt;!&ndash;            </class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Program page">-->
+<!--        <parameter name="otsStartLocation" value="infants" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromInfantsPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Visit Us promo">
+        <parameter name="otsStartLocation" value="visitus" />
+        <classes>
+            <class name="OTS_fromVisitUsPromo" >
+            </class>
+        </classes>
+    </test>
+
+    <test name="School page info">
+        <parameter name="otsStartLocation" value="schoolinfo" />
+        <classes>
+            <class name="OTS_fromSchoolPage" >
+            </class>
+        </classes>
+    </test>
+
+</suite>
