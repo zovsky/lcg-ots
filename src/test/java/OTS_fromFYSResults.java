@@ -5,7 +5,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners (value = AssumptionListener.class)
-public class OTS_fromFYScard extends A_BaseTest {
+public class OTS_fromFYSResults extends A_BaseTest {
 
     public boolean schoolBrands() {
         return true;
@@ -13,8 +13,18 @@ public class OTS_fromFYScard extends A_BaseTest {
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
     @Assumption(methods = "schoolBrands")
-    public void t01_submitOTSfromSchoolPage() {
-        app.schoolPage.open();
+    public void t01_submitOTSfromFYSCard() {
+        app.fysResultsPage.open();
+        app.openOTSfrom(otsStartLocation);
+        app.otsFrame.switchToFrame();
+        app.otsFrame.submitOTSwithSchoolPreselected();
+    }
+
+    @Test (enabled = true, retryAnalyzer = Retry.class)
+    @Assumption(methods = "schoolBrands")
+    public void t02_submitOTSfromFYSMap() {
+        app.fysResultsPage.open();
+        app.fysResultsPage.openSchoolBalloon();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();

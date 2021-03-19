@@ -14,6 +14,7 @@ public class App {
     public Footer footer;
     public NavUtility navUtility;
 
+    public FYSResultsPage fysResultsPage;
     public HomePage homePage;
     public InfantsPage infantsPage;
     public LoginPage loginPage;
@@ -27,6 +28,7 @@ public class App {
         footer = PageBuilder.buildFooter();
         navUtility = PageBuilder.buildNavUtility();
 
+        fysResultsPage = PageBuilder.buildFYSResultsPage();
         homePage = PageBuilder.buildHomePage();
         infantsPage = PageBuilder.buildInfantsPage();
         loginPage = PageBuilder.buildLoginPage();
@@ -58,6 +60,12 @@ public class App {
                 break;
             case "twoctaspromo":
                 schoolPage.otsSchoolPageTwoCTAsPromo.click();
+                break;
+            case "fyscard":
+                fysResultsPage.otsFYSResultsCard.click();
+                break;
+            case "fysmap":
+                fysResultsPage.otsFYSResultsMap.click();
                 break;
             default:
                 eyeBrow.otsEyebrow.click();

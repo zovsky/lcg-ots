@@ -47,5 +47,9 @@ public class PageBuilder {
         return new SchoolPage(BrandDataSwitch.getSchoolPageURL());
     }
 
+    public static FYSResultsPage buildFYSResultsPage() {
+        return new FYSResultsPage(BrandDataSwitch.getFYSResultsPageURL());
+    }
+
 }
 

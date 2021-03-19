@@ -48,4 +48,31 @@ public class BrandDataSwitch {
         }
     }
 
+    public static String getFYSResultsPageURL() {
+        switch (TestConfig.domain)
+        {
+            case "tutortime.com":
+                return  "/child-care-centers/find-a-school/search-results/?state=MN";
+            case "pathwayslearningacademy.com":
+                return "/locations"; //todo search for state where A is clickable on the map on all envs
+            case "montessori.com":
+                return "/montessori-schools/find-a-school/search-results/?state=GA";
+            case "lapetite.com":
+                return "/child-care-centers/find-a-school/search-results/?state=OR";
+            case "everbrookacademy.com":
+                return "/our-schools/chicago-il-4809"; //both todo
+            case "creativekidslearningcenter.com":
+                return "/schools/las-vegas-nv-6701"; //both todo
+            case "childtime.com":
+                return "/your-local-school/lewisville-tx-1204"; //both todo
+            case "childrenscourtyard.com":
+                return "/your-local-school/arlington-tx-3003"; //both todo
+            case "u-gro.com":
+                return "/your-local-school/4832-u-gro-of-lititz-pa"; //both todo
+            case "learningcaregroup.com":
+                return ""; //todo
+            default:
+                return "Error: no brand";
+        }
+    }
 }
