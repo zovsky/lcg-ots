@@ -4,10 +4,8 @@ import app.components.VisitUsPromo;
 import app.navigation.EyeBrow;
 import app.navigation.Footer;
 import app.navigation.NavUtility;
-import app.pages.HomePage;
-import app.pages.LoginPage;
-import app.pages.OTSframe;
-import app.pages.InfantsPage;
+import app.pages.*;
+import helpers.BrandDataSwitch;
 import helpers.TestConfig;
 
 public class PageBuilder {
@@ -44,5 +42,10 @@ public class PageBuilder {
         if (TestConfig.domain.contains("lapetite.com")) return new VisitUsPromo("/child-care-centers");
         else return new VisitUsPromo("/education");
     }
+
+    public static SchoolPage buildSchoolPage() {
+        return new SchoolPage(BrandDataSwitch.getSchoolPageURL());
+    }
+
 }
 

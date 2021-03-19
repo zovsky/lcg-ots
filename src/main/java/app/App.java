@@ -4,31 +4,34 @@ import app.components.VisitUsPromo;
 import app.navigation.EyeBrow;
 import app.navigation.Footer;
 import app.navigation.NavUtility;
-import app.pages.HomePage;
-import app.pages.LoginPage;
-import app.pages.OTSframe;
-import app.pages.InfantsPage;
+import app.pages.*;
 
 public class App {
 
-    public OTSframe otsFrame;
-    public LoginPage loginPage;
-    public HomePage homePage;
-    public EyeBrow eyeBrow;
-    public NavUtility navUtility;
-    public Footer footer;
-    public InfantsPage infantsPage;
     public VisitUsPromo visitUsPromo;
 
+    public EyeBrow eyeBrow;
+    public Footer footer;
+    public NavUtility navUtility;
+
+    public HomePage homePage;
+    public InfantsPage infantsPage;
+    public LoginPage loginPage;
+    public OTSframe otsFrame;
+    public SchoolPage schoolPage;
+
     public App() {
-        loginPage = PageBuilder.buildLoginPage();
-        homePage = PageBuilder.buildHomePage();
-        otsFrame = PageBuilder.buildOTSFrame();
-        eyeBrow = PageBuilder.buildEyeBrow();
-        navUtility = PageBuilder.buildNavUtility();
-        footer = PageBuilder.buildFooter();
-        infantsPage = PageBuilder.buildInfantsPage();
         visitUsPromo = PageBuilder.buildVisitUsPromo();
+
+        eyeBrow = PageBuilder.buildEyeBrow();
+        footer = PageBuilder.buildFooter();
+        navUtility = PageBuilder.buildNavUtility();
+
+        homePage = PageBuilder.buildHomePage();
+        infantsPage = PageBuilder.buildInfantsPage();
+        loginPage = PageBuilder.buildLoginPage();
+        otsFrame = PageBuilder.buildOTSFrame();
+        schoolPage = PageBuilder.buildSchoolPage();
 
     }
 
@@ -49,6 +52,12 @@ public class App {
                 break;
             case "visitus": //TT, LPA, CT, CCY, CK
                 visitUsPromo.otsVisitUs.scrollTo().click();
+                break;
+            case "schoolinfo":
+                schoolPage.otsSchoolPageInfo.click();
+                break;
+            case "twoctaspromo":
+                schoolPage.otsSchoolPageTwoCTAsPromo.click();
                 break;
             default:
                 eyeBrow.otsEyebrow.click();

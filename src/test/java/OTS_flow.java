@@ -1,5 +1,5 @@
-import app.pages.OTSframe;
 import com.codeborne.selenide.Condition;
+import helpers.BrandDataSwitch;
 import helpers.Retry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -51,7 +51,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickNextConfirmSchoolButton();
         app.otsFrame.selectVirtualTour();
         Assert.assertEquals(app.otsFrame.selectedSchoolName.shouldBe(Condition.visible).getText(),
-                OTSframe.getStep4ExpectedText());
+                BrandDataSwitch.getStep4ExpectedText());
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
@@ -66,7 +66,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.selectInPersonTour();
 
         Assert.assertEquals(app.otsFrame.selectedSchoolName.shouldBe(Condition.visible).getText(),
-                OTSframe.getStep4ExpectedText());
+                BrandDataSwitch.getStep4ExpectedText());
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
@@ -86,7 +86,7 @@ public class OTS_flow extends A_BaseTest {
         sleep(3000);
         app.otsFrame.clickNextButtonCalendar();
         Assert.assertTrue(app.otsFrame.instructions.shouldBe(Condition.visible).getText()
-                .contains(OTSframe.getStep5ExpectedText()));
+                .contains(BrandDataSwitch.getStep5ExpectedText()));
 
     }
 

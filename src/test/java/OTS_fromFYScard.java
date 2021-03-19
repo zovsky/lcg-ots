@@ -5,7 +5,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners (value = AssumptionListener.class)
-public class OTS_fromSchoolPage extends A_BaseTest {
+public class OTS_fromFYScard extends A_BaseTest {
 
     public boolean schoolBrands() {
         return true;

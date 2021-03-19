@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.TestConfig;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -44,15 +45,6 @@ public class OTSframe {
     public SelenideElement selectTypeText = $(".ots-form-panel-99").$(By.tagName("h3"));
     public SelenideElement virtualTourButton = $("#VirtualTourHeader");
     public SelenideElement inPersonTourButton = $("#InPersonTourHeader");
-    public static String step4ExpectedText;
-    public static String getStep4ExpectedText() {
-        switch (TestConfig.domain) {
-            case "tutortime.com":
-            step4ExpectedText = "Tutor Time of Austin, TX";
-            break;
-        }
-        return step4ExpectedText;
-    }
     public void selectVirtualTour() {
         virtualTourButton.click();
     }
@@ -66,7 +58,6 @@ public class OTSframe {
     public SelenideElement tomorrow = $$("a.ui-state-default").get(1);
     public SelenideElement secondTimeslot = $$("a.timeslot").get(1);
     public SelenideElement nextButtonCalendar = $("#date-time-form").$(".backNextWrapper").$(".nextLink");
-    public static String step5ExpectedText;
     public void selectTomorrow() {
         tomorrow.click();
     }
@@ -75,14 +66,6 @@ public class OTSframe {
     }
     public void clickNextButtonCalendar() {
         nextButtonCalendar.click();
-    }
-    public static String getStep5ExpectedText() {
-        switch (TestConfig.domain) {
-            case "tutortime.com":
-                step5ExpectedText = "To confirm and schedule your Tutor Time of Austin, TX";
-                break;
-        }
-        return step5ExpectedText;
     }
 
     //step6 form
@@ -127,5 +110,32 @@ public class OTSframe {
 
     public void switchToFrame() {
         Selenide.switchTo().frame("iFrameResizer0");
+    }
+
+    public void submitOTSwithoutSchoolPreselected() {
+        searchForLocation();
+        clickSearchButton();
+        selectFirstSchool();
+        clickNextConfirmSchoolButton();
+        selectInPersonTour();
+        selectTomorrow();
+        selectSecondTimeslot();
+        sleep(3000);
+        clickNextButtonCalendar(); //todo uncomment
+//        fillOTSFormAndSubmit();
+//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+//                "Thank You!");
+    }
+
+    public void submitOTSwithSchoolPreselected() {
+        clickNextConfirmSchoolButton();
+        selectInPersonTour();
+        selectTomorrow();
+        selectSecondTimeslot();
+        sleep(3000);
+        clickNextButtonCalendar(); //todo uncomment
+//        fillOTSFormAndSubmit();
+//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+//                "Thank You!");
     }
 }

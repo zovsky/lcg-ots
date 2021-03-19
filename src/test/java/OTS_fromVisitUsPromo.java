@@ -24,17 +24,6 @@ public class OTS_fromVisitUsPromo extends A_BaseTest {
         app.visitUsPromo.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-//        app.otsFrame.searchForLocation();
-//        app.otsFrame.clickSearchButton();
-//        app.otsFrame.selectFirstSchool();
-//        app.otsFrame.clickNextConfirmSchoolButton();
-//        app.otsFrame.selectInPersonTour();
-//        app.otsFrame.selectTomorrow();
-//        app.otsFrame.selectSecondTimeslot();
-//        sleep(3000);
-//        app.otsFrame.clickNextButtonCalendar(); //todo uncomment
-//        app.otsFrame.fillOTSFormAndSubmit();
-//        Assert.assertEquals(app.otsFrame.thankYou.shouldBe(Condition.visible).getText(),
-//                "Thank You!");
+        app.otsFrame.submitOTSwithoutSchoolPreselected();
     }
 }
