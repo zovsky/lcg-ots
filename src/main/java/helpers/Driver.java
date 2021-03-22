@@ -1,6 +1,7 @@
 package helpers;
 
 import com.codeborne.selenide.*;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.logging.LogEntries;
@@ -182,7 +183,7 @@ public class Driver {
         List<LogEntry> logList = log.getAll();
         for (LogEntry entry : logList) {
             System.out.println(entry.getLevel() + " " + entry.getMessage());
-            //do something useful with the data
+            Allure.addAttachment("Console log", entry.toString());
         }
         return logList;
     }
