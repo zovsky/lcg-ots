@@ -178,14 +178,14 @@ public class Driver {
         }
     }
 
-    public static List<LogEntry> getBrowserLogs() {
+    public static void getBrowserLogs() { //List<LogEntry>
         LogEntries log = currentDriver().manage().logs().get("browser");
         List<LogEntry> logList = log.getAll();
         for (LogEntry entry : logList) {
             System.out.println(entry.getLevel() + " " + entry.getMessage());
             Allure.addAttachment("Console log", entry.toString());
         }
-        return logList;
+        //return logList;
     }
 
     // COOKIES
