@@ -180,6 +180,10 @@ public class Driver {
     public static List<LogEntry> getBrowserLogs() {
         LogEntries log = currentDriver().manage().logs().get("browser");
         List<LogEntry> logList = log.getAll();
+        for (LogEntry entry : logList) {
+            System.out.println(entry.getLevel() + " " + entry.getMessage());
+            //do something useful with the data
+        }
         return logList;
     }
 
