@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
+import static helpers.BrandDataSwitch.getEmailAddress;
 
 public class OTSframe {
 
@@ -95,14 +96,7 @@ public class OTSframe {
             sleep(10);
         }
     }
-    public static String getEmailAddress() {
-        switch (TestConfig.domain) {
-            case "tutortime.com":
-                emailAddress = "VALIDTT@EXAMPLE.COM";
-                break;
-        }
-        return emailAddress;
-    }
+
 
     public SelenideElement thankYou = $(".confirmation-panel").$(By.tagName("h2"));
 

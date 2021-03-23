@@ -30,6 +30,31 @@ public class BrandDataSwitch {
         }
     }
 
+    public static String getEmailAddress() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                return "TTVALID@EXAMPLE.COM";
+            case "pathwayslearningacademy.com":
+                return "PLAVALID@EXAMPLE.COM";
+            case "montessori.com":
+                return "MUVALID@EXAMPLE.COM";
+            case "lapetite.com":
+                return "LPAVALID@EXAMPLE.COM";
+            case "everbrookacademy.com":
+                return "EAVALID@EXAMPLE.COM";
+            case "creativekidslearningcenter.com":
+                return "CKVALID@EXAMPLE.COM";
+            case "childtime.com":
+                return "CTVALID@EXAMPLE.COM";
+            case "childrenscourtyard.com":
+                return "CCYVALID@EXAMPLE.COM";
+            case "u-gro.com":
+                return "UGVALID@EXAMPLE.COM";
+            default:
+                return "";
+        }
+    }
+
     public static String getStep4ExpectedText() {
         switch (TestConfig.domain) {
             case "tutortime.com":
