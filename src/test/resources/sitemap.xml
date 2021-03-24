@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Sitemap" verbose="1" parallel="tests" thread-count="1" data-provider-thread-count="3">
+
+    <listeners>
+        <listener class-name="A_BaseTestListener"/>
+    </listeners>
+
+    <test name="Sitemap">
+        <parameter name="otsStartLocation" value="" />
+        <classes>
+            <class name="Sitemap" >
+            </class>
+        </classes>
+    </test>
+
+</suite>

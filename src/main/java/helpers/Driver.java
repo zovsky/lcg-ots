@@ -9,6 +9,7 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -165,17 +166,18 @@ public class Driver {
 
     public static void takeScreenshot() {
 
-        File scrFile = ((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.FILE);
+        //File scrFile = ((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.FILE);
+        Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
 
-        String path = System.getProperty("user.dir")
-                + File.separator + "test-output"
-                + File.separator + "screenshots"
-                + File.separator + " " + "screenshot_" +  (new SimpleDateFormat("HHmmssSSS").format(new Date())) + ".png";
-        try {
-            FileUtils.copyFile(scrFile, new File(path));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String path = System.getProperty("user.dir")
+//                + File.separator + "test-output"
+//                + File.separator + "screenshots"
+//                + File.separator + " " + "screenshot_" +  (new SimpleDateFormat("HHmmssSSS").format(new Date())) + ".png";
+//        try {
+//            FileUtils.copyFile(scrFile, new File(path));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public static void getBrowserLogs() { //List<LogEntry>

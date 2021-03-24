@@ -1,3 +1,4 @@
+import helpers.Driver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,6 +16,7 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+        Driver.takeScreenshot();
     }
 
     @Override
