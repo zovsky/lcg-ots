@@ -1,3 +1,5 @@
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import helpers.Driver;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -24,7 +26,7 @@ public class A_BaseTestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("Attaching a screenshot of the failed step");
-        Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
+        Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Override
