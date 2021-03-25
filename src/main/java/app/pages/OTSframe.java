@@ -3,6 +3,7 @@ package app.pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import helpers.BrandDataSwitch;
 import helpers.TestConfig;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -17,11 +18,7 @@ public class OTSframe {
     public SelenideElement panelText = $(".panel-text");
     public SelenideElement searchButton = $("#Panel1SubmitBtn");
     public void searchForLocation () {
-        switch (TestConfig.domain) {
-            case "tutortime.com":
-                locationField.shouldBe(Condition.visible).setValue("TX");
-                break;
-        }
+        locationField.shouldBe(Condition.visible).setValue(BrandDataSwitch.getStep1SearchQuery());
     }
     public void clickSearchButton() {
         searchButton.shouldBe(Condition.enabled).click();
@@ -117,8 +114,8 @@ public class OTSframe {
         selectTomorrow();
         selectSecondTimeslot();
         sleep(3000);
-        clickNextButtonCalendar(); //todo uncomment
-//        fillOTSFormAndSubmit();
+        clickNextButtonCalendar();
+//        fillOTSFormAndSubmit(); //todo uncomment
 //        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
 //                "Thank You!");
     }
@@ -129,8 +126,8 @@ public class OTSframe {
         selectTomorrow();
         selectSecondTimeslot();
         sleep(3000);
-        clickNextButtonCalendar(); //todo uncomment
-//        fillOTSFormAndSubmit();
+        clickNextButtonCalendar();
+//        fillOTSFormAndSubmit(); //todo uncomment
 //        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
 //                "Thank You!");
     }

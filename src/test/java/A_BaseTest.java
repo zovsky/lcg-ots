@@ -32,7 +32,7 @@ class A_BaseTest {
     }
 
     @AfterMethod
-    public void clearCookies() {
+    public void afterMethod() {
         Driver.getBrowserLogs(); //get browser console logs and attach to the report
         Driver.clearCookies();
     }

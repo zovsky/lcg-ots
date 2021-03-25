@@ -1,7 +1,14 @@
 import helpers.Driver;
+import io.qameta.allure.Allure;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.io.ByteArrayInputStream;
+
+import static helpers.Driver.currentDriver;
 
 public class A_BaseTestListener implements ITestListener {
 
@@ -16,16 +23,17 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        Driver.takeScreenshot();
+        System.out.println("Attaching a screenshot of the failed step");
+        Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Override
     public void onTestSkipped(ITestResult TestResult) {
+        currentDriver().getTitle();
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult TestResult) {
-        Driver.takeScreenshot();
     }
 
     @Override

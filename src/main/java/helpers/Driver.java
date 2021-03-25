@@ -146,7 +146,7 @@ public class Driver {
     }
 
     public static void clearCookies() {
-        open(TestConfig.baseUrl);
+        //open(TestConfig.baseUrl);
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
     }
@@ -167,7 +167,8 @@ public class Driver {
     public static void takeScreenshot() {
 
         //File scrFile = ((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.FILE);
-        Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
+        currentDriver().getTitle();
+        Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
 
 //        String path = System.getProperty("user.dir")
 //                + File.separator + "test-output"

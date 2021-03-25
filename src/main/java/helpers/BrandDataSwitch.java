@@ -59,6 +59,8 @@ public class BrandDataSwitch {
         switch (TestConfig.domain) {
             case "tutortime.com":
                 return "Tutor Time of Austin, TX";
+            case "pathwayslearningacademy.com":
+                return "Pathways Learning Academy of Indianapolis, IN";
             default:
                 return "Error: no brand";
         }
@@ -68,6 +70,8 @@ public class BrandDataSwitch {
         switch (TestConfig.domain) {
             case "tutortime.com":
                 return "To confirm and schedule your Tutor Time of Austin, TX";
+            case "pathwayslearningacademy.com":
+                return "To confirm and schedule your ";
             default:
                 return "Error: no brand";
         }
@@ -79,9 +83,9 @@ public class BrandDataSwitch {
             case "tutortime.com":
                 return  "/child-care-centers/find-a-school/search-results/?state=MN";
             case "pathwayslearningacademy.com":
-                return "/locations"; //todo search for state where A is clickable on the map on all envs
+                return "/locations";
             case "montessori.com":
-                return "/montessori-schools/find-a-school/search-results/?state=GA";
+                return "/montessori-schools/find-a-school/search-results/?state=GA"; //todo search for state where A is clickable on the map on all envs
             case "lapetite.com":
                 return "/child-care-centers/find-a-school/search-results/?state=OR";
             case "everbrookacademy.com":
@@ -98,6 +102,17 @@ public class BrandDataSwitch {
                 return ""; //todo
             default:
                 return "Error: no brand";
+        }
+    }
+
+    public static String getStep1SearchQuery() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                return "TX";
+            case "pathwayslearningacademy.com":
+                return "IN";
+            default:
+                return "";
         }
     }
 }
