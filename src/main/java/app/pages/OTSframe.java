@@ -60,9 +60,11 @@ public class OTSframe {
     public SelenideElement secondTimeslot = $$("a.timeslot").get(1);
     public SelenideElement nextButtonCalendar = $("#date-time-form").$(".backNextWrapper").$(".nextLink");
     public void selectTomorrow() {
+        sleep(1000);
         tomorrow.click();
     }
     public void selectSecondTimeslot() {
+        sleep(1000);
         secondTimeslot.click();
     }
     public void clickNextButtonCalendar() {
