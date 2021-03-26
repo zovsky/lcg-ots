@@ -167,7 +167,7 @@ public class Driver {
     public static void takeScreenshot() {
 
         //File scrFile = ((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.FILE);
-        currentDriver().getTitle();
+
         Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) currentDriver()).getScreenshotAs(OutputType.BYTES)));
 
 //        String path = System.getProperty("user.dir")

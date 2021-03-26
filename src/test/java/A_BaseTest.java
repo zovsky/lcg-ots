@@ -3,6 +3,7 @@ import helpers.Driver;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -32,7 +33,18 @@ class A_BaseTest {
     }
 
     @AfterMethod
-    public void afterMethod() {
+    public void afterMethod(ITestResult result) {
+
+        try {
+            if (result.getStatus() == ITestResult.FAILURE) {
+                Driver.takeScreenshot();
+            } else if (result.getStatus() == ITestResult.SKIP) {
+            } else if (result.getStatus() == ITestResult.SUCCESS){
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         Driver.getBrowserLogs(); //get browser console logs and attach to the report
         Driver.clearCookies();
     }

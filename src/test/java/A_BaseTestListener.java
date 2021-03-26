@@ -4,6 +4,7 @@ import helpers.Driver;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -25,8 +26,16 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("Attaching a screenshot of the failed step");
-        Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES)));
+
+//        Object currentClass = result.getInstance();
+//        WebDriver webDriver = (Driver) currentClass.currentDriver();
+//
+//        if (webDriver != null)
+//        {
+//            System.out.println("Attaching a screenshot of the failed step");
+//            Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES)));
+//        }
+        //Driver.takeScreenshot();
     }
 
     @Override
