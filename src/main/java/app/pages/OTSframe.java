@@ -22,14 +22,15 @@ public class OTSframe {
     }
     public void clickSearchButton() {
         searchButton.shouldBe(Condition.enabled).click();
+        sleep(2000);
     }
 
     //step2
     public SelenideElement resultSummary = $(".result-summary");
     public SelenideElement cityState = $$(".school-results").first().$(".org");
-    public SelenideElement selectFirstSchoolButton = $$(".school-results").first().$(".linkText");
+    public SelenideElement selectFirstSchoolButton = $(".school-results").$$("a.selectSchool.btn").first();
     public void selectFirstSchool() {
-        selectFirstSchoolButton.shouldBe(Condition.enabled).click();
+        selectFirstSchoolButton.shouldBe(Condition.visible).click();
     }
 
     //step3
@@ -45,23 +46,23 @@ public class OTSframe {
     public SelenideElement inPersonTourButton = $("#InPersonTourHeader");
     public void selectVirtualTour() {
         virtualTourButton.click();
+        sleep(3000);
     }
     public void selectInPersonTour() {
-        sleep(1000);
         inPersonTourButton.click();
+        sleep(3000);
     }
 
     //step5 calendar
     public SelenideElement selectedSchoolName = $$(".selected-school-name").first();
     public SelenideElement tomorrow = $$("a.ui-state-default").get(1);
-    public SelenideElement secondTimeslot = $$("a.timeslot").get(1);
+    public SelenideElement secondTimeslot = $(".timeslots").$$("a.timeslot").get(1);
     public SelenideElement nextButtonCalendar = $("#date-time-form").$(".backNextWrapper").$(".nextLink");
     public void selectTomorrow() {
-        sleep(1000);
         tomorrow.click();
+        sleep(1000);
     }
     public void selectSecondTimeslot() {
-        sleep(1000);
         secondTimeslot.click();
     }
     public void clickNextButtonCalendar() {
