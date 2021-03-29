@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.BrandDataSwitch;
-import helpers.TestConfig;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -116,9 +115,9 @@ public class OTSframe {
         selectSecondTimeslot();
         sleep(3000);
         clickNextButtonCalendar();
-//        fillOTSFormAndSubmit(); //todo uncomment
-//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-//                "Thank You!");
+        fillOTSFormAndSubmit(); //todo uncomment
+        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                "Thank You!");
     }
 
     public void submitOTSwithSchoolPreselected() {
@@ -128,8 +127,8 @@ public class OTSframe {
         selectSecondTimeslot();
         sleep(3000);
         clickNextButtonCalendar();
-//        fillOTSFormAndSubmit(); //todo uncomment
-//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-//                "Thank You!");
+        fillOTSFormAndSubmit(); //todo uncomment
+        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                "Thank You!");
     }
 }

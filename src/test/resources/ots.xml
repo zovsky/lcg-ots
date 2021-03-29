@@ -17,45 +17,45 @@
                     <include name="t04_selectVirtualTour" />
                     <include name="t05_selectInPersonTour" />
                     <include name="t06_selectDateAndTime" />
-<!--                    <include name="t07_fillForm" />-->
+                    <include name="t07_fillForm" />
                 </methods>
             </class>
         </classes>
     </test>
 
-<!--    <test name="NavUtil">-->
-<!--        <parameter name="otsStartLocation" value="navutil" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_flow" >-->
-<!--                <methods>-->
-<!--                    <include name="t01_searchForLocation" />-->
-<!--                    <include name="t02_selectSchoolFromList" />-->
-<!--                    <include name="t03_confirmSelectedSchool" />-->
-<!--                    <include name="t04_selectVirtualTour" />-->
-<!--                    <include name="t05_selectInPersonTour" />-->
-<!--                    <include name="t06_selectDateAndTime" />-->
-<!--                    <include name="t07_fillForm" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="NavUtil">
+        <parameter name="otsStartLocation" value="navutil" />
+        <classes>
+            <class name="OTS_flow" >
+                <methods>
+                    <include name="t01_searchForLocation" />
+                    <include name="t02_selectSchoolFromList" />
+                    <include name="t03_confirmSelectedSchool" />
+                    <include name="t04_selectVirtualTour" />
+                    <include name="t05_selectInPersonTour" />
+                    <include name="t06_selectDateAndTime" />
+                    <include name="t07_fillForm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="Footer">-->
-<!--        <parameter name="otsStartLocation" value="footer" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_flow" >-->
-<!--                <methods>-->
-<!--                    <include name="t01_searchForLocation" />-->
-<!--                    <include name="t02_selectSchoolFromList" />-->
-<!--                    <include name="t03_confirmSelectedSchool" />-->
-<!--                    <include name="t04_selectVirtualTour" />-->
-<!--                    <include name="t05_selectInPersonTour" />-->
-<!--                    <include name="t06_selectDateAndTime" />-->
-<!--                    <include name="t07_fillForm" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Footer">
+        <parameter name="otsStartLocation" value="footer" />
+        <classes>
+            <class name="OTS_flow" >
+                <methods>
+                    <include name="t01_searchForLocation" />
+                    <include name="t02_selectSchoolFromList" />
+                    <include name="t03_confirmSelectedSchool" />
+                    <include name="t04_selectVirtualTour" />
+                    <include name="t05_selectInPersonTour" />
+                    <include name="t06_selectDateAndTime" />
+                    <include name="t07_fillForm" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
     <test name="Program page">
         <parameter name="otsStartLocation" value="infants" />
