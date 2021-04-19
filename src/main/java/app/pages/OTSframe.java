@@ -45,11 +45,11 @@ public class OTSframe {
     public SelenideElement inPersonTourButton = $("#InPersonTourHeader");
     public void selectVirtualTour() {
         virtualTourButton.click();
-        sleep(3000);
+        sleep(2000);
     }
     public void selectInPersonTour() {
         inPersonTourButton.click();
-        sleep(3000);
+        sleep(2000);
     }
 
     //step5 calendar
@@ -79,9 +79,9 @@ public class OTSframe {
     public SelenideElement submitButton = $("#Panel5SubmitBtn");
     public static String emailAddress;
     public void fillOTSFormAndSubmit() {
-        firstName.sendKeys("first");
-        lastName.sendKeys("last");
-        phone.sendKeys("6574342222");
+        firstName.sendKeys("Automated");
+        lastName.sendKeys("Test");
+        phone.sendKeys("6574342222"); //657-342-2224
         email.sendKeys(getEmailAddress());
         child1Name.sendKeys("name");
         sleep(1000);

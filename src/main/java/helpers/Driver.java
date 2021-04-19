@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -182,11 +183,13 @@ public class Driver {
     }
 
     public static void getBrowserLogs() { //List<LogEntry>
-        LogEntries log = currentDriver().manage().logs().get("browser");
-        List<LogEntry> logList = log.getAll();
-        for (LogEntry entry : logList) {
-            System.out.println(entry.getLevel() + " " + entry.getMessage());
-            Allure.addAttachment("Console log", entry.toString());
+        if (TestConfig.browser.contains("chrome")) {
+            LogEntries log = currentDriver().manage().logs().get(LogType.BROWSER);
+            List<LogEntry> logList = log.getAll();
+            for (LogEntry entry : logList) {
+                System.out.println(entry.getLevel() + " " + entry.getMessage());
+                Allure.addAttachment("Console log", entry.toString());
+            }
         }
         //return logList;
     }

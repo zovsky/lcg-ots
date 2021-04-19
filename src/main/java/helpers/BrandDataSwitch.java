@@ -1,5 +1,9 @@
 package helpers;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class BrandDataSwitch {
 
     public static String getSchoolPageURL() {
@@ -33,23 +37,23 @@ public class BrandDataSwitch {
     public static String getEmailAddress() {
         switch (TestConfig.domain) {
             case "tutortime.com":
-                return "TTVALID@EXAMPLE.COM";
+                return "TT_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "pathwayslearningacademy.com":
-                return "PLAVALID@EXAMPLE.COM";
+                return "PLA_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "montessori.com":
-                return "MUVALID@EXAMPLE.COM";
+                return "MU_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "lapetite.com":
-                return "LPAVALID@EXAMPLE.COM";
+                return "LPA_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "everbrookacademy.com":
-                return "EAVALID@EXAMPLE.COM";
+                return "EA_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "creativekidslearningcenter.com":
-                return "CKVALID@EXAMPLE.COM";
+                return "CK_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "childtime.com":
-                return "CTVALID@EXAMPLE.COM";
+                return "CT_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "childrenscourtyard.com":
-                return "CCYVALID@EXAMPLE.COM";
+                return "CCY_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "u-gro.com":
-                return "UGVALID@EXAMPLE.COM";
+                return "UG_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             default:
                 return "";
         }

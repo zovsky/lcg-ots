@@ -28,12 +28,12 @@
         <classes>
             <class name="OTS_flow" >
                 <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
                     <include name="t07_fillForm" />
                 </methods>
             </class>
@@ -45,12 +45,12 @@
         <classes>
             <class name="OTS_flow" >
                 <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
                     <include name="t07_fillForm" />
                 </methods>
             </class>
