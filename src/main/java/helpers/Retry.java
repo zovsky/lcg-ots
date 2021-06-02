@@ -6,7 +6,7 @@ import org.testng.Reporter;
 
 public class Retry implements IRetryAnalyzer {
     private int retryCount = 0;
-    private int maxRetryCount = 1;
+    private final int maxRetryCount = 1;
 
     public String getResultStatusName(int status) {
         String resultName = null;

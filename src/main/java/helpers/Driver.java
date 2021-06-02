@@ -47,8 +47,8 @@ public class Driver {
             case "firefox":
                 Configuration.browser = Browsers.FIREFOX;
                 break;
-            default:
-                Configuration.browser = Browsers.CHROME;
+            case "edge":
+                Configuration.browser = Browsers.EDGE;
                 break;
         }
 
@@ -105,7 +105,7 @@ public class Driver {
     }
 
     public static WebDriver currentDriver() {
-        return WebDriverRunner.getSelenideDriver().getWebDriver();
+        return WebDriverRunner.getWebDriver();
     }
 
     public static void open(String url) {
