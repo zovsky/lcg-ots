@@ -49,11 +49,9 @@ class A_BaseTest {
             throw new RuntimeException(e);
         }
 
-        try {
+        if (!currentDriver().toString().contains("null")) {
             Driver.getBrowserLogs(); //get browser console logs and attach to the report
             Driver.clearCookies();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 
