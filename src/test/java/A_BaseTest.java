@@ -5,6 +5,7 @@ import helpers.Driver;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -44,14 +45,11 @@ class A_BaseTest {
                 Driver.takeScreenshot();
             } else if (result.getStatus() == ITestResult.SKIP) {
             } else if (result.getStatus() == ITestResult.SUCCESS){
+                Driver.getBrowserLogs(); //get browser console logs and attach to the report
+                Driver.clearCookies();
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
-
-        if (!currentDriver().toString().contains("null")) {
-            Driver.getBrowserLogs(); //get browser console logs and attach to the report
-            Driver.clearCookies();
         }
     }
 

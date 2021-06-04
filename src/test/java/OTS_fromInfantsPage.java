@@ -17,7 +17,10 @@ public class OTS_fromInfantsPage extends A_BaseTest {
     public boolean infantsBrands() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "lapetite.com", "childrenscourtyard.com")
                 .contains(TestConfig.domain)) return true;
-        else return false;
+        else {
+            app.infantsPage.open();
+            return false;
+        }
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
