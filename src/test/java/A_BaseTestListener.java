@@ -40,7 +40,7 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult TestResult) {
-        currentDriver().getTitle();
+        //currentDriver().quit();
     }
 
     @Override
