@@ -43,6 +43,8 @@ class A_BaseTest {
         try {
             if (result.getStatus() == ITestResult.FAILURE) {
                 Driver.takeScreenshot();
+                Driver.getBrowserLogs(); //get browser console logs and attach to the report
+                Driver.clearCookies();
             } else if (result.getStatus() == ITestResult.SKIP) {
             } else if (result.getStatus() == ITestResult.SUCCESS){
                 Driver.getBrowserLogs(); //get browser console logs and attach to the report
