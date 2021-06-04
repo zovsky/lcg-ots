@@ -2,8 +2,7 @@ package app.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class FYSResultsPage extends BasePage {
 
@@ -18,6 +17,7 @@ public class FYSResultsPage extends BasePage {
 
     public void openSchoolBalloon() {
         showMap.click();
+        sleep(2000);
         pinA.click();
     }
 }

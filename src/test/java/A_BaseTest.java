@@ -1,4 +1,6 @@
 import app.App;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import helpers.Driver;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -9,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+
+import static helpers.Driver.currentDriver;
 
 class A_BaseTest {
 
@@ -45,8 +49,12 @@ class A_BaseTest {
             throw new RuntimeException(e);
         }
 
-        Driver.getBrowserLogs(); //get browser console logs and attach to the report
-        Driver.clearCookies();
+        try {
+            Driver.getBrowserLogs(); //get browser console logs and attach to the report
+            Driver.clearCookies();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @AfterClass
