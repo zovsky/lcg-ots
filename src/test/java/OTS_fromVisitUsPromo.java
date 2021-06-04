@@ -15,7 +15,10 @@ public class OTS_fromVisitUsPromo extends A_BaseTest {
     public boolean visitUsBrands() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com", "childrenscourtyard.com", "creativekidslearningcenter.com")
                 .contains(TestConfig.domain)) return true;
-        else return false;
+        else {
+            app.visitUsPromo.open();
+            return false;
+        }
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
