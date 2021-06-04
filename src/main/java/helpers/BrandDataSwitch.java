@@ -62,7 +62,7 @@ public class BrandDataSwitch {
     public static String getStep4ExpectedText() {
         switch (TestConfig.domain) {
             case "tutortime.com":
-                return "Tutor Time of Austin, TX";
+                return "Tutor Time of Murrieta, CA";
             case "pathwayslearningacademy.com":
                 return "Pathways Learning Academy of Indianapolis, IN";
             default:
@@ -73,11 +73,11 @@ public class BrandDataSwitch {
     public static String getStep5ExpectedText() {
         switch (TestConfig.domain) {
             case "tutortime.com":
-                return "To confirm and schedule your Tutor Time of Austin, TX";
+                return "To confirm and schedule your Tutor Time of Murrieta, CA";
             case "pathwayslearningacademy.com":
-                return "To confirm and schedule your ";
+                return "To confirm and schedule your Pathways Learning Academy of Indianapolis, IN";
             default:
-                return "Error: no brand";
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
 
@@ -105,18 +105,18 @@ public class BrandDataSwitch {
             case "learningcaregroup.com":
                 return ""; //todo
             default:
-                return "Error: no brand";
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
 
     public static String getStep1SearchQuery() {
         switch (TestConfig.domain) {
             case "tutortime.com":
-                return "TX";
+                return "murietta";
             case "pathwayslearningacademy.com":
                 return "IN";
             default:
-                return "";
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
 }

@@ -67,9 +67,6 @@ public class App {
             case "fysmap":
                 fysResultsPage.otsFYSResultsMap.click();
                 break;
-            default:
-                eyeBrow.otsEyebrow.click();
-                break;
         }
     }
 }
