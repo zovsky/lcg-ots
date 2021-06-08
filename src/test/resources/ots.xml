@@ -6,88 +6,88 @@
         <listener class-name="A_BaseTestListener"/>
     </listeners>
 
-    <test name="Eyebrow">
-        <parameter name="otsStartLocation" value="eyebrow" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Eyebrow">-->
+<!--        <parameter name="otsStartLocation" value="eyebrow" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="NavUtil">
-        <parameter name="otsStartLocation" value="navutil" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="NavUtil">-->
+<!--        <parameter name="otsStartLocation" value="navutil" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Footer">
-        <parameter name="otsStartLocation" value="footer" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Footer">-->
+<!--        <parameter name="otsStartLocation" value="footer" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Program page">
-        <parameter name="otsStartLocation" value="infants" />
-        <classes>
-            <class name="OTS_fromInfantsPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Program page">-->
+<!--        <parameter name="otsStartLocation" value="infants" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromInfantsPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Visit Us promo">
-        <parameter name="otsStartLocation" value="visitus" />
-        <classes>
-            <class name="OTS_fromVisitUsPromo" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Visit Us promo">-->
+<!--        <parameter name="otsStartLocation" value="visitus" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromVisitUsPromo" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="School page info">
-        <parameter name="otsStartLocation" value="schoolinfo" />
-        <classes>
-            <class name="OTS_fromSchoolPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="School page info">-->
+<!--        <parameter name="otsStartLocation" value="schoolinfo" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromSchoolPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="School page 2 CTAs promo">
-        <parameter name="otsStartLocation" value="twoctaspromo" />
-        <classes>
-            <class name="OTS_fromSchoolPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="School page 2 CTAs promo">-->
+<!--        <parameter name="otsStartLocation" value="twoctaspromo" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromSchoolPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="FYS Card">
         <parameter name="otsStartLocation" value="fyscard" />

@@ -21,7 +21,7 @@ public class OTS_fromFYSResults extends A_BaseTest {
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
-    @Assumption(methods = "schoolBrands")
+    @Assumption(methods = "allDomainsAllowed")
     public void t02_submitOTSfromFYSMap() {
         app.fysResultsPage.open();
         app.fysResultsPage.openSchoolBalloon();
