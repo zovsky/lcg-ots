@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 @Listeners (value = AssumptionListener.class)
 public class OTS_fromSchoolPage extends A_BaseTest {
 
-    public boolean schoolBrands() {
+    public boolean allDomains() {
         return true;
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
-    @Assumption(methods = "schoolBrands")
+    @Assumption(methods = "allDomains")
     public void t01_submitOTSfromSchoolPage() {
         app.schoolPage.open();
         app.openOTSfrom(otsStartLocation);

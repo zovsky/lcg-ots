@@ -30,7 +30,7 @@ public class BrandDataSwitch {
             case "learningcaregroup.com":
                 return ""; //todo
             default:
-                return "Error: no brand";
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
 
@@ -89,7 +89,7 @@ public class BrandDataSwitch {
             case "pathwayslearningacademy.com":
                 return "/locations";
             case "montessori.com":
-                return "/montessori-schools/find-a-school/search-results/?state=GA"; //todo search for state where A is clickable on the map on all envs
+                return "/montessori-schools/find-a-school/search-results/?state=GA";
             case "lapetite.com":
                 return "/child-care-centers/find-a-school/search-results/?state=OR";
             case "everbrookacademy.com":
@@ -115,6 +115,8 @@ public class BrandDataSwitch {
                 return "murietta";
             case "pathwayslearningacademy.com":
                 return "IN";
+            case "montessori.com":
+                return "GA";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }

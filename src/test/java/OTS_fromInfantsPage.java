@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 @Listeners (value = AssumptionListener.class)
 public class OTS_fromInfantsPage extends A_BaseTest {
 
-    public boolean infantsBrands() {
+    public boolean onlyDomainsThatHaveOTSOnInfantsPage() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "lapetite.com", "childrenscourtyard.com")
                 .contains(TestConfig.domain)) return true;
         else {
@@ -24,7 +24,7 @@ public class OTS_fromInfantsPage extends A_BaseTest {
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
-    @Assumption(methods = "infantsBrands")
+    @Assumption(methods = "onlyDomainsThatHaveOTSOnInfantsPage")
     public void t01_submitOTSfromInfantsPage() {
         app.infantsPage.open();
         app.openOTSfrom(otsStartLocation);

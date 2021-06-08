@@ -1,10 +1,18 @@
 import com.codeborne.selenide.Condition;
 import helpers.BrandDataSwitch;
 import helpers.Retry;
+import helpers.TestConfig;
+import nl.javadude.assumeng.Assumption;
+import nl.javadude.assumeng.AssumptionListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+
 import static com.codeborne.selenide.Selenide.sleep;
 
+@Listeners(value = AssumptionListener.class)
 public class OTS_flow extends A_BaseTest {
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
@@ -40,7 +48,12 @@ public class OTS_flow extends A_BaseTest {
         Assert.assertEquals(app.otsFrame.selectTypeText.getText(), "Select an Appointment Type");
     }
 
+    public boolean onlyDomainsThatHaveVitualTourType() {
+        return true;
+    }
+
     @Test (enabled = true, retryAnalyzer = Retry.class)
+    @Assumption(methods = "onlyDomainsThatHaveVitualTourType")
     public void t04_selectVirtualTour() {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
@@ -54,7 +67,19 @@ public class OTS_flow extends A_BaseTest {
                 BrandDataSwitch.getStep4ExpectedText());
     }
 
+    public boolean onlyDomainsThatHaveInPersonTourType() {
+        if (Arrays.asList("pathwayslearningacademy.com").contains(TestConfig.domain) &&
+            Arrays.asList("https://www.").contains(TestConfig.env)) {
+            app.homePage.open();
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
     @Test (enabled = true, retryAnalyzer = Retry.class)
+    @Assumption(methods = "onlyDomainsThatHaveInPersonTourType")
     public void t05_selectInPersonTour() {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
@@ -78,7 +103,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
-        app.otsFrame.selectInPersonTour();
+        app.otsFrame.selectFirstTourType();
         app.otsFrame.selectTomorrow();
         Assert.assertTrue(app.otsFrame.nextButtonCalendar.shouldBe(Condition.visible).is(Condition.disabled));
         app.otsFrame.selectSecondTimeslot();
@@ -99,7 +124,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
-        app.otsFrame.selectInPersonTour();
+        app.otsFrame.selectFirstTourType();
         app.otsFrame.selectTomorrow();
         app.otsFrame.selectSecondTimeslot();
         sleep(3000);

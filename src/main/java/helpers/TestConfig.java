@@ -10,6 +10,7 @@ public class TestConfig {
 
     public static void initConfig() {
         //mvn clean test -Dbrowser=chrome -Dheadless=0 -DsuiteXmlFile=ots.xml -Denv=qa -Ddomain=tt
+        //debug: add -Dmaven.surefire.debug
 
         browser = System.getProperty("browser") == null ? "chrome" : System.getProperty("browser");
         headless = System.getProperty("headless") == null ? "0" : System.getProperty("headless");

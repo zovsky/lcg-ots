@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 @Listeners (value = AssumptionListener.class)
 public class OTS_fromFYSResults extends A_BaseTest {
 
-    public boolean schoolBrands() {
+    public boolean allDomainsAllowed() {
         return true;
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
-    @Assumption(methods = "schoolBrands")
+    @Assumption(methods = "allDomainsAllowed")
     public void t01_submitOTSfromFYSCard() {
         app.fysResultsPage.open();
         app.openOTSfrom(otsStartLocation);

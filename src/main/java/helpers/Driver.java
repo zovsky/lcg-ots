@@ -94,9 +94,9 @@ public class Driver {
             case "stage":
                 TestConfig.env = "https://stage.";
                 break;
-//            case "prod":
-//                TestConfig.env = "https://www.";
-//                break;
+            case "prod":
+                TestConfig.env = "https://www.";
+                break;
         }
 
         TestConfig.baseUrl = TestConfig.env+TestConfig.domain;

@@ -52,6 +52,14 @@ public class OTSframe {
         sleep(2000);
     }
 
+    public SelenideElement firstTourTypeAvailable = $$(".icon-circle").first();
+
+    public void selectFirstTourType() { //todo select any tour type
+        firstTourTypeAvailable.click();
+        sleep(2000);
+    }
+
+
     //step5 calendar
     public SelenideElement selectedSchoolName = $$(".selected-school-name").first();
     public SelenideElement tomorrow = $$("a.ui-state-default").get(1);
@@ -110,7 +118,7 @@ public class OTSframe {
         clickSearchButton();
         selectFirstSchool();
         clickNextConfirmSchoolButton();
-        selectInPersonTour();
+        selectFirstTourType();
         selectTomorrow();
         selectSecondTimeslot();
         sleep(3000);
@@ -122,7 +130,7 @@ public class OTSframe {
 
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
-        selectInPersonTour();
+        selectFirstTourType();
         selectTomorrow();
         selectSecondTimeslot();
         sleep(3000);

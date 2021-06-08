@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 @Listeners (value = AssumptionListener.class)
 public class OTS_fromVisitUsPromo extends A_BaseTest {
 
-    public boolean visitUsBrands() {
+    public boolean onlyDomainsThatHaveVisitUsPromo() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com", "childrenscourtyard.com", "creativekidslearningcenter.com")
                 .contains(TestConfig.domain)) return true;
         else {
@@ -22,7 +22,7 @@ public class OTS_fromVisitUsPromo extends A_BaseTest {
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
-    @Assumption(methods = "visitUsBrands")
+    @Assumption(methods = "onlyDomainsThatHaveVisitUsPromo")
     public void t01_submitOTSfromVisitUsPromo() {
         app.visitUsPromo.open();
         app.openOTSfrom(otsStartLocation);
