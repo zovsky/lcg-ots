@@ -13,10 +13,11 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class OTS_fromVisitUsPromo extends A_BaseTest {
 
     public boolean onlyDomainsThatHaveVisitUsPromo() {
-        if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com", "childrenscourtyard.com", "creativekidslearningcenter.com")
+        if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com",
+                "childrenscourtyard.com", "creativekidslearningcenter.com")
                 .contains(TestConfig.domain)) return true;
         else {
-            app.visitUsPromo.open();
+            app.homePage.open();
             return false;
         }
     }

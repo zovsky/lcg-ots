@@ -28,7 +28,7 @@ public class Driver {
 
         // Set settings for selenide browser
         Configuration.pageLoadStrategy = "normal"; //normal-eager-none
-        Configuration.timeout = 20000;
+        Configuration.timeout = 15000;
         Configuration.browserSize = "1500x1100";
         Configuration.holdBrowserOpen = false;
         Configuration.screenshots = false;

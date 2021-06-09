@@ -1,11 +1,11 @@
 package app.pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.BrandDataSwitch;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.BrandDataSwitch.getEmailAddress;
@@ -16,7 +16,7 @@ public class OTSframe {
     public SelenideElement locationField = $("#location");
     public SelenideElement panelText = $(".panel-text");
     public SelenideElement searchButton = $("#Panel1SubmitBtn");
-    public void searchForLocation () {
+    public void typeSearchValue() {
         locationField.shouldBe(Condition.visible).setValue(BrandDataSwitch.getStep1SearchQuery());
     }
     public void clickSearchButton() {
@@ -25,7 +25,6 @@ public class OTSframe {
     }
 
     //step2
-    public SelenideElement resultSummary = $(".result-summary");
     public SelenideElement cityState = $$(".school-results").first().$(".org");
     public SelenideElement selectFirstSchoolButton = $(".school-results").$$("a.selectSchool.btn").first();
     public void selectFirstSchool() {
@@ -114,29 +113,29 @@ public class OTSframe {
     }
 
     public void submitOTSwithoutSchoolPreselected() {
-        searchForLocation();
+        typeSearchValue();
         clickSearchButton();
         selectFirstSchool();
         clickNextConfirmSchoolButton();
         selectFirstTourType();
         selectTomorrow();
-        selectSecondTimeslot();
-        sleep(3000);
-        clickNextButtonCalendar();
-        fillOTSFormAndSubmit(); //todo uncomment
-        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-                "Thank You!");
+//        selectSecondTimeslot();
+//        sleep(3000);
+//        clickNextButtonCalendar();
+//        fillOTSFormAndSubmit(); //todo uncomment
+//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+//                "Thank You!");
     }
 
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
         selectFirstTourType();
         selectTomorrow();
-        selectSecondTimeslot();
-        sleep(3000);
-        clickNextButtonCalendar();
-        fillOTSFormAndSubmit(); //todo uncomment
-        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-                "Thank You!");
+//        selectSecondTimeslot();
+//        sleep(3000);
+//        clickNextButtonCalendar();
+//        fillOTSFormAndSubmit(); //todo uncomment
+//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+//                "Thank You!");
     }
 }

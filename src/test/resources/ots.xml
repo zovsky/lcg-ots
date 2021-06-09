@@ -16,7 +16,7 @@
                     <include name="t03_confirmSelectedSchool" />
                     <include name="t04_selectVirtualTour" />
                     <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
+<!--                    <include name="t06_selectDateAndTime" />-->
 <!--                    <include name="t07_fillForm" />-->
                 </methods>
             </class>
@@ -33,8 +33,8 @@
 <!--                    <include name="t03_confirmSelectedSchool" />-->
 <!--                    <include name="t04_selectVirtualTour" />-->
 <!--                    <include name="t05_selectInPersonTour" />-->
-<!--                    <include name="t06_selectDateAndTime" />-->
-<!--                    <include name="t07_fillForm" />-->
+<!--&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--        </classes>-->
@@ -50,65 +50,65 @@
 <!--                    <include name="t03_confirmSelectedSchool" />-->
 <!--                    <include name="t04_selectVirtualTour" />-->
 <!--                    <include name="t05_selectInPersonTour" />-->
-<!--                    <include name="t06_selectDateAndTime" />-->
-<!--                    <include name="t07_fillForm" />-->
+<!--&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--    <test name="Program page">-->
-<!--        <parameter name="otsStartLocation" value="infants" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromInfantsPage" >-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Program page">
+        <parameter name="otsStartLocation" value="infants" />
+        <classes>
+            <class name="OTS_fromInfantsPage" >
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="Visit Us promo">-->
-<!--        <parameter name="otsStartLocation" value="visitus" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromVisitUsPromo" >-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Visit Us promo">
+        <parameter name="otsStartLocation" value="visitus" />
+        <classes>
+            <class name="OTS_fromVisitUsPromo" >
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="School page info">-->
-<!--        <parameter name="otsStartLocation" value="schoolinfo" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromSchoolPage" >-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="School page info">
+        <parameter name="otsStartLocation" value="schoolinfo" />
+        <classes>
+            <class name="OTS_fromSchoolPage" >
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="School page 2 CTAs promo">-->
-<!--        <parameter name="otsStartLocation" value="twoctaspromo" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromSchoolPage" >-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="School page 2 CTAs promo">
+        <parameter name="otsStartLocation" value="twoctaspromo" />
+        <classes>
+            <class name="OTS_fromSchoolPage" >
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="FYS Card">-->
-<!--        <parameter name="otsStartLocation" value="fyscard" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromFYSResults" >-->
-<!--                <methods>-->
-<!--                    <include name="t01_submitOTSfromFYSCard" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="FYS Card">
+        <parameter name="otsStartLocation" value="fyscard" />
+        <classes>
+            <class name="OTS_fromFYSResults" >
+                <methods>
+                    <include name="t01_submitOTSfromFYSCard" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="FYS Map">-->
-<!--        <parameter name="otsStartLocation" value="fysmap" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromFYSResults" >-->
-<!--                <methods>-->
-<!--                    <include name="t02_submitOTSfromFYSMap" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="FYS Map">
+        <parameter name="otsStartLocation" value="fysmap" />
+        <classes>
+            <class name="OTS_fromFYSResults" >
+                <methods>
+                    <include name="t02_submitOTSfromFYSMap" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 </suite>

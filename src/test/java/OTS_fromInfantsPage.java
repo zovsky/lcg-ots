@@ -15,10 +15,10 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class OTS_fromInfantsPage extends A_BaseTest {
 
     public boolean onlyDomainsThatHaveOTSOnInfantsPage() {
-        if (Arrays.asList("lapetite.com", "tutortime.com", "lapetite.com", "childrenscourtyard.com")
+        if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com", "childrenscourtyard.com")
                 .contains(TestConfig.domain)) return true;
         else {
-            app.infantsPage.open();
+            app.homePage.open();
             return false;
         }
     }

@@ -22,9 +22,9 @@ public class BrandDataSwitch {
             case "creativekidslearningcenter.com":
                 return "/schools/las-vegas-nv-6701"; //both
             case "childtime.com":
-                return "/your-local-school/lewisville-tx-1204"; //both
+                return "/your-local-school/silverdale-wa-0902"; //both
             case "childrenscourtyard.com":
-                return "/your-local-school/arlington-tx-3003"; //both
+                return "/your-local-school/dupont-wa-3220/"; //both
             case "u-gro.com":
                 return "/your-local-school/4832-u-gro-of-lititz-pa"; //both
             case "learningcaregroup.com":
@@ -65,6 +65,18 @@ public class BrandDataSwitch {
                 return "Tutor Time of Murrieta, CA";
             case "pathwayslearningacademy.com":
                 return "Pathways Learning Academy of Indianapolis, IN";
+            case "montessori.com":
+                return "Montessori Unlimited of Duluth, GA";
+            case "lapetite.com":
+                return "La Petite Academy of Sherwood, OR";
+            case "everbrookacademy.com":
+                return "Everbrook Academy of Fort Collins, CO";
+            case "creativekidslearningcenter.com":
+                return "Creative Kids of Las Vegas, NV";
+            case "childtime.com":
+                return "Childtime of Silverdale, WA";
+            case "childrenscourtyard.com":
+                return "The Children's Courtyard of DuPont, WA";
             default:
                 return "Error: no brand";
         }
@@ -76,6 +88,18 @@ public class BrandDataSwitch {
                 return "To confirm and schedule your Tutor Time of Murrieta, CA";
             case "pathwayslearningacademy.com":
                 return "To confirm and schedule your Pathways Learning Academy of Indianapolis, IN";
+            case "montessori.com":
+                return "To confirm and schedule your Montessori Unlimited of Duluth, GA";
+            case "lapetite.com":
+                return "To confirm and schedule your La Petite Academy of Sherwood, OR";
+            case "everbrookacademy.com":
+                return "To confirm and schedule your Everbrook Academy of Fort Collins, CO";
+            case "creativekidslearningcenter.com":
+                return "To confirm and schedule your Creative Kids of Las Vegas, NV";
+            case "childtime.com":
+                return "To confirm and schedule your Childtime of Silverdale, WA";
+            case "childrenscourtyard.com":
+                return "To confirm and schedule your The Children's Courtyard of DuPont, WA";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -93,13 +117,13 @@ public class BrandDataSwitch {
             case "lapetite.com":
                 return "/child-care-centers/find-a-school/search-results/?state=OR";
             case "everbrookacademy.com":
-                return "/our-schools/chicago-il-4809"; //both todo
+                return "/locations/find-a-school/search-results/?state=CO";
             case "creativekidslearningcenter.com":
-                return "/schools/las-vegas-nv-6701"; //both todo
+                return "/locations";
             case "childtime.com":
-                return "/your-local-school/lewisville-tx-1204"; //both todo
+                return "/child-care-centers/find-a-school/search-results/?state=WA";
             case "childrenscourtyard.com":
-                return "/your-local-school/arlington-tx-3003"; //both todo
+                return "/child-care-centers/find-a-school/search-results/?state=WA";
             case "u-gro.com":
                 return "/your-local-school/4832-u-gro-of-lititz-pa"; //both todo
             case "learningcaregroup.com":
@@ -117,6 +141,16 @@ public class BrandDataSwitch {
                 return "IN";
             case "montessori.com":
                 return "GA";
+            case "lapetite.com":
+                return "OR";
+            case "everbrookacademy.com":
+                return "CO";
+            case "creativekidslearningcenter.com":
+                return "NV";
+            case "childtime.com":
+                return "WA";
+            case "childrenscourtyard.com":
+                return "WA";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }

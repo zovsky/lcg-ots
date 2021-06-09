@@ -22,6 +22,9 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.switchToFrame();
         Assert.assertEquals(app.otsFrame.panelText.shouldBe(Condition.visible).getText(),
                 "Virtual tours may be available and you will have the option to select this in the coming steps.");
+        app.otsFrame.typeSearchValue();
+        app.otsFrame.clickSearchButton();
+        Assert.assertEquals(app.otsFrame.selectFirstSchoolButton.shouldBe(Condition.visible).getText(), "Select");
     }
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
@@ -29,7 +32,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         Assert.assertEquals(app.otsFrame.virtualText.shouldBe(Condition.visible).getText(),
@@ -41,7 +44,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
@@ -58,7 +61,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
@@ -84,7 +87,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
@@ -99,7 +102,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
@@ -120,7 +123,7 @@ public class OTS_flow extends A_BaseTest {
         app.homePage.open();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
-        app.otsFrame.searchForLocation();
+        app.otsFrame.typeSearchValue();
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
