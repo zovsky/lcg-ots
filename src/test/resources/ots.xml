@@ -16,8 +16,8 @@
                     <include name="t03_confirmSelectedSchool" />
                     <include name="t04_selectVirtualTour" />
                     <include name="t05_selectInPersonTour" />
-<!--                    <include name="t06_selectDateAndTime" />-->
-<!--                    <include name="t07_fillForm" />-->
+                    <include name="t06_selectDateAndTime" />
+                    <include name="t07_fillForm" />
                 </methods>
             </class>
         </classes>
@@ -33,8 +33,8 @@
 <!--                    <include name="t03_confirmSelectedSchool" />-->
 <!--                    <include name="t04_selectVirtualTour" />-->
 <!--                    <include name="t05_selectInPersonTour" />-->
-<!--&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--        </classes>-->
@@ -50,8 +50,8 @@
 <!--                    <include name="t03_confirmSelectedSchool" />-->
 <!--                    <include name="t04_selectVirtualTour" />-->
 <!--                    <include name="t05_selectInPersonTour" />-->
-<!--&lt;!&ndash;                    <include name="t06_selectDateAndTime" />&ndash;&gt;-->
-<!--&lt;!&ndash;                    <include name="t07_fillForm" />&ndash;&gt;-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--        </classes>-->

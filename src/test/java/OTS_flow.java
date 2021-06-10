@@ -71,7 +71,8 @@ public class OTS_flow extends A_BaseTest {
     }
 
     public boolean onlyDomainsThatHaveInPersonTourType() {
-        if (Arrays.asList("pathwayslearningacademy.com").contains(TestConfig.domain) &&
+        //skipped for PLA and EA on prod
+        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com").contains(TestConfig.domain) &&
             Arrays.asList("https://www.").contains(TestConfig.env)) {
             app.homePage.open();
             return false;
@@ -106,7 +107,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
-        app.otsFrame.selectFirstTourType();
+        app.otsFrame.selectFirstAvailableTourType();
         app.otsFrame.selectTomorrow();
         Assert.assertTrue(app.otsFrame.nextButtonCalendar.shouldBe(Condition.visible).is(Condition.disabled));
         app.otsFrame.selectSecondTimeslot();
@@ -127,7 +128,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickSearchButton();
         app.otsFrame.selectFirstSchool();
         app.otsFrame.clickNextConfirmSchoolButton();
-        app.otsFrame.selectFirstTourType();
+        app.otsFrame.selectFirstAvailableTourType();
         app.otsFrame.selectTomorrow();
         app.otsFrame.selectSecondTimeslot();
         sleep(3000);

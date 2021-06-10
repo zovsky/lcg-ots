@@ -68,15 +68,15 @@ public class BrandDataSwitch {
             case "montessori.com":
                 return "Montessori Unlimited of Duluth, GA";
             case "lapetite.com":
-                return "La Petite Academy of Sherwood, OR";
+                return "La Petite Academy of Albuquerque, NM";
             case "everbrookacademy.com":
-                return "Everbrook Academy of Fort Collins, CO";
+                return "Everbrook Academy of Novi, MI";
             case "creativekidslearningcenter.com":
                 return "Creative Kids of Las Vegas, NV";
             case "childtime.com":
-                return "Childtime of Silverdale, WA";
+                return "Childtime of San Diego, CA";
             case "childrenscourtyard.com":
-                return "The Children's Courtyard of DuPont, WA";
+                return "The Children's Courtyard of Aurora, IL";
             default:
                 return "Error: no brand";
         }
@@ -91,15 +91,15 @@ public class BrandDataSwitch {
             case "montessori.com":
                 return "To confirm and schedule your Montessori Unlimited of Duluth, GA";
             case "lapetite.com":
-                return "To confirm and schedule your La Petite Academy of Sherwood, OR";
+                return "To confirm and schedule your La Petite Academy of Albuquerque, NM";
             case "everbrookacademy.com":
-                return "To confirm and schedule your Everbrook Academy of Fort Collins, CO";
+                return "To confirm and schedule your Everbrook Academy of Novi, MI";
             case "creativekidslearningcenter.com":
                 return "To confirm and schedule your Creative Kids of Las Vegas, NV";
             case "childtime.com":
-                return "To confirm and schedule your Childtime of Silverdale, WA";
+                return "To confirm and schedule your Childtime of San Diego, CA";
             case "childrenscourtyard.com":
-                return "To confirm and schedule your The Children's Courtyard of DuPont, WA";
+                return "To confirm and schedule your The Children's Courtyard of Aurora, IL";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -115,15 +115,15 @@ public class BrandDataSwitch {
             case "montessori.com":
                 return "/montessori-schools/find-a-school/search-results/?state=GA";
             case "lapetite.com":
-                return "/child-care-centers/find-a-school/search-results/?state=OR";
+                return "/child-care-centers/find-a-school/search-results/?location=87122";
             case "everbrookacademy.com":
-                return "/locations/find-a-school/search-results/?state=CO";
+                return "/locations/find-a-school/search-results/?state=MI";
             case "creativekidslearningcenter.com":
                 return "/locations";
             case "childtime.com":
-                return "/child-care-centers/find-a-school/search-results/?state=WA";
+                return "child-care-centers/find-a-school/search-results/?location=92126";
             case "childrenscourtyard.com":
-                return "/child-care-centers/find-a-school/search-results/?state=WA";
+                return "child-care-centers/find-a-school/search-results/?location=aurora%2C+il";
             case "u-gro.com":
                 return "/your-local-school/4832-u-gro-of-lititz-pa"; //both todo
             case "learningcaregroup.com":
@@ -142,15 +142,15 @@ public class BrandDataSwitch {
             case "montessori.com":
                 return "GA";
             case "lapetite.com":
-                return "OR";
+                return "87122";
             case "everbrookacademy.com":
-                return "CO";
+                return "MI";
             case "creativekidslearningcenter.com":
                 return "NV";
             case "childtime.com":
-                return "WA";
+                return "92126";
             case "childrenscourtyard.com":
-                return "WA";
+                return "Aurora, IL";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }

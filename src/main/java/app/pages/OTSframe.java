@@ -6,6 +6,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.BrandDataSwitch;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.BrandDataSwitch.getEmailAddress;
@@ -51,10 +52,12 @@ public class OTSframe {
         sleep(2000);
     }
 
-    public SelenideElement firstTourTypeAvailable = $$(".icon-circle").first();
+    public ElementsCollection firstTourTypeAvailable = $$(".icon-circle");
 
-    public void selectFirstTourType() { //todo select any tour type
-        firstTourTypeAvailable.click();
+    public void selectFirstAvailableTourType() { //todo select any tour type
+        if (firstTourTypeAvailable.first().is(Condition.visible))
+            firstTourTypeAvailable.first().click();
+        else firstTourTypeAvailable.get(1).click();
         sleep(2000);
     }
 
@@ -117,7 +120,7 @@ public class OTSframe {
         clickSearchButton();
         selectFirstSchool();
         clickNextConfirmSchoolButton();
-        selectFirstTourType();
+        selectFirstAvailableTourType();
         selectTomorrow();
 //        selectSecondTimeslot();
 //        sleep(3000);
@@ -129,7 +132,7 @@ public class OTSframe {
 
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
-        selectFirstTourType();
+        selectFirstAvailableTourType();
         selectTomorrow();
 //        selectSecondTimeslot();
 //        sleep(3000);
