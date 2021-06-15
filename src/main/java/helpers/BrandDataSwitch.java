@@ -155,4 +155,27 @@ public class BrandDataSwitch {
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
+
+    public static String getDMAPageURL() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                return "/area/oxnard-thousand-oaks-ventura/";
+            case "pathwayslearningacademy.com":
+                return "n/a";
+            case "montessori.com":
+                return "/area/atlanta-sandy-springs-marietta/";
+            case "lapetite.com":
+                return "/area/atlanta-sandy-springs-marietta/";
+            case "everbrookacademy.com":
+                return "/area/charlotte-gastonia-concord/";
+            case "creativekidslearningcenter.com":
+                return "n/a";
+            case "childtime.com":
+                return "/area/akron/";
+            case "childrenscourtyard.com":
+                return "/area/austin-round-rock/";
+            default:
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
+        }
+    }
 }

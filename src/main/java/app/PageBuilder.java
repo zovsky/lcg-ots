@@ -51,5 +51,9 @@ public class PageBuilder {
         return new FYSResultsPage(BrandDataSwitch.getFYSResultsPageURL());
     }
 
+    public static DMAPage buildDmaPage() {
+        return new DMAPage(BrandDataSwitch.getDMAPageURL());
+    }
+
 }
 

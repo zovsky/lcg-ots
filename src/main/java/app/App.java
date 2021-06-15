@@ -14,6 +14,7 @@ public class App {
     public Footer footer;
     public NavUtility navUtility;
 
+    public DMAPage dmaPage;
     public FYSResultsPage fysResultsPage;
     public HomePage homePage;
     public InfantsPage infantsPage;
@@ -28,6 +29,7 @@ public class App {
         footer = PageBuilder.buildFooter();
         navUtility = PageBuilder.buildNavUtility();
 
+        dmaPage = PageBuilder.buildDmaPage();
         fysResultsPage = PageBuilder.buildFYSResultsPage();
         homePage = PageBuilder.buildHomePage();
         infantsPage = PageBuilder.buildInfantsPage();
@@ -67,6 +69,12 @@ public class App {
             case "fysmap":
                 fysResultsPage.otsFYSResultsMap.click();
                 break;
+            case "dmahero":
+                dmaPage.otsDmaHero.click();
+            case "dmacardin":
+                dmaPage.otsDmaCard.click();
+            case "dmamapin":
+                dmaPage.otsDmaMap.click();
         }
     }
 }
