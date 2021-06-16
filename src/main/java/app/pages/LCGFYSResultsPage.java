@@ -4,15 +4,14 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class FYSResultsPage extends BasePage {
+public class LCGFYSResultsPage extends BasePage {
 
     public SelenideElement otsFYSResultsCard = $$(".locationCard").first().$(".scheduleLink.iframeLightBoxLink");
     public SelenideElement otsFYSResultsMap = $(".scheduleLink.gMapOTSlink");
-    public SelenideElement schoolNameLink = $$(".locationCard").first().$(".schoolNameLink");
     private SelenideElement pinA = $("#gmimap0").parent();
     private SelenideElement showMap = $(".showMap");
 
-    public FYSResultsPage(String pageUrl) {
+    public LCGFYSResultsPage(String pageUrl) {
         super(pageUrl);
     }
 

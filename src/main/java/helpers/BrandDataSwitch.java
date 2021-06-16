@@ -178,4 +178,50 @@ public class BrandDataSwitch {
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
+
+    public static String getCampaignPageURL() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                return "/campaign/aiss/";
+            case "pathwayslearningacademy.com":
+                return "n/a";
+            case "montessori.com":
+                return "/campaign/aiss/";
+            case "lapetite.com":
+                return "/campaign/aiss/";
+            case "everbrookacademy.com":
+                return "/campaign/aiss/";
+            case "creativekidslearningcenter.com":
+                return "n/a";
+            case "childtime.com":
+                return "/campaign/aiss/";
+            case "childrenscourtyard.com":
+                return "/campaign/aiss/";
+            default:
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
+        }
+    }
+
+    public static String getLCGFYSsearch() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":
+                return "/campaign/aiss/";
+            case "pathwayslearningacademy.com":
+                return "n/a";
+            case "montessori.com":
+                return "/campaign/aiss/";
+            case "lapetite.com":
+                return "/campaign/aiss/";
+            case "everbrookacademy.com":
+                return "/campaign/aiss/";
+            case "creativekidslearningcenter.com":
+                return "n/a";
+            case "childtime.com":
+                return "/campaign/aiss/";
+            case "childrenscourtyard.com":
+                return "80530";
+            default:
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
+        }
+    }
 }

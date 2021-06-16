@@ -55,5 +55,12 @@ public class PageBuilder {
         return new DMAPage(BrandDataSwitch.getDMAPageURL());
     }
 
+    public static CampaignPage buildCampaignPage() {
+        return new CampaignPage(BrandDataSwitch.getCampaignPageURL());
+    }
+
+    public static LCGFYSPage buildLCGFYSResultsPage() {
+        return new LCGFYSPage(TestConfig.env + "learningcaregroup.com/about-us/find-a-school/");
+    }
 }
 

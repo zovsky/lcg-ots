@@ -14,11 +14,13 @@ public class App {
     public Footer footer;
     public NavUtility navUtility;
 
+    public CampaignPage campaignPage;
     public DMAPage dmaPage;
     public FYSResultsPage fysResultsPage;
     public HomePage homePage;
     public InfantsPage infantsPage;
     public LoginPage loginPage;
+    public LCGFYSPage lcgFYSPage;
     public OTSframe otsFrame;
     public SchoolPage schoolPage;
 
@@ -29,11 +31,13 @@ public class App {
         footer = PageBuilder.buildFooter();
         navUtility = PageBuilder.buildNavUtility();
 
+        campaignPage = PageBuilder.buildCampaignPage();
         dmaPage = PageBuilder.buildDmaPage();
         fysResultsPage = PageBuilder.buildFYSResultsPage();
         homePage = PageBuilder.buildHomePage();
         infantsPage = PageBuilder.buildInfantsPage();
         loginPage = PageBuilder.buildLoginPage();
+        lcgFYSPage = PageBuilder.buildLCGFYSResultsPage();
         otsFrame = PageBuilder.buildOTSFrame();
         schoolPage = PageBuilder.buildSchoolPage();
 
@@ -75,6 +79,10 @@ public class App {
                 dmaPage.otsDmaCard.click();
             case "dmamapin":
                 dmaPage.otsDmaMap.click();
+            case "campaign":
+                campaignPage.otsCampaign.click();
+            case "lcgfyscard":
+                campaignPage.otsCampaign.click();
         }
     }
 }

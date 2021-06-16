@@ -133,12 +133,31 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="DMA map in-brand">
-        <parameter name="otsStartLocation" value="dmamapin" />
+<!--    <test name="DMA map in-brand">-->
+<!--        <parameter name="otsStartLocation" value="dmamapin" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPageInBrand" >-->
+<!--                <methods>-->
+<!--                    <include name="t03_submitOTSfromMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Campaign page">-->
+<!--        <parameter name="otsStartLocation" value="campaign" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromCampaignPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="LCG FYS Card">
+        <parameter name="otsStartLocation" value="lcgfyscard" />
         <classes>
-            <class name="OTS_fromDMAPageInBrand" >
+            <class name="OTS_fromLCGFYSResults" >
                 <methods>
-                    <include name="t03_submitOTSfromMap" />
+                    <include name="t01_submitOTSfromLCGFYSCard" />
                 </methods>
             </class>
         </classes>
