@@ -23,6 +23,5 @@ public class LCGFYSPage extends BasePage {
 
     public void searchForLocation() {
         locationField.setValue(BrandDataSwitch.getLCGFYSsearch()).submit();
-        sleep(5000);
     }
 }

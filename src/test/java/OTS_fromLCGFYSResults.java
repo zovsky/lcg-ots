@@ -28,10 +28,12 @@ public class OTS_fromLCGFYSResults extends A_BaseTest {
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
     @Assumption(methods = "allDomainsAllowed")
-    public void t02_submitOTSfromLCGFYSMap() { //todo first
-        app.fysResultsPage.open();
+    public void t02_submitOTSfromLCGFYSMap() {
+        app.lcgFYSPage.open();
+        app.lcgFYSPage.searchForLocation();
+        Assert.assertTrue(app.fysResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
         app.fysResultsPage.openSchoolBalloon();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom("fysmap");
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }

@@ -205,19 +205,19 @@ public class BrandDataSwitch {
     public static String getLCGFYSsearch() {
         switch (TestConfig.domain) {
             case "tutortime.com":
-                return "/campaign/aiss/";
+                return "garden plain";
             case "pathwayslearningacademy.com":
-                return "n/a";
+                return "46220";
             case "montessori.com":
-                return "/campaign/aiss/";
+                return "30022";
             case "lapetite.com":
-                return "/campaign/aiss/";
+                return "covington";
             case "everbrookacademy.com":
-                return "/campaign/aiss/";
+                return "fort collins";
             case "creativekidslearningcenter.com":
-                return "n/a";
+                return "henderson";
             case "childtime.com":
-                return "/campaign/aiss/";
+                return "renton";
             case "childrenscourtyard.com":
                 return "80530";
             default:

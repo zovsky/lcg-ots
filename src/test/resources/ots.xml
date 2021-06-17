@@ -163,4 +163,15 @@
         </classes>
     </test>
 
+    <test name="LCG FYS Map">
+        <parameter name="otsStartLocation" value="lcgfysmap" />
+        <classes>
+            <class name="OTS_fromLCGFYSResults" >
+                <methods>
+                    <include name="t02_submitOTSfromLCGFYSMap" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>
