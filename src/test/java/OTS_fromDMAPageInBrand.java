@@ -48,7 +48,7 @@ public class OTS_fromDMAPageInBrand extends A_BaseTest {
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
 
-//    public boolean onlyDomainsThatHaveDMACrossBrand() {
+//    public boolean onlyDomainsThatHaveDMACrossBrand() { //todo cross-brand
 //        return true;
 //    }
 //

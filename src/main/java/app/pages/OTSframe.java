@@ -122,23 +122,23 @@ public class OTSframe {
         clickNextConfirmSchoolButton();
         selectFirstAvailableTourType();
         selectTomorrow();
-//        selectSecondTimeslot();
-//        sleep(3000);
-//        clickNextButtonCalendar();
-//        fillOTSFormAndSubmit(); //todo uncomment
-//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-//                "Thank You!");
+        selectSecondTimeslot();
+        sleep(3000);
+        clickNextButtonCalendar();
+        fillOTSFormAndSubmit(); //todo uncomment
+        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                "Thank You!");
     }
 
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
         selectFirstAvailableTourType();
         selectTomorrow();
-//        selectSecondTimeslot();
-//        sleep(3000);
-//        clickNextButtonCalendar();
-//        fillOTSFormAndSubmit(); //todo uncomment
-//        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-//                "Thank You!");
+        selectSecondTimeslot();
+        sleep(3000);
+        clickNextButtonCalendar();
+        fillOTSFormAndSubmit(); //todo uncomment
+        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                "Thank You!");
     }
 }
