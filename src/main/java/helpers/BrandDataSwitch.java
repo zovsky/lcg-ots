@@ -6,6 +6,35 @@ import java.util.Date;
 
 public class BrandDataSwitch {
 
+    public static String getBrandForDropDown() {
+        switch (TestConfig.domain)
+        {
+            case "tutortime.com":
+                return  "Tutor Time Child Care";
+            case "pathwayslearningacademy.com":
+                return "Pathways Learning Academy";
+            case "montessori.com":
+                return "Montessori Unlimited";
+            case "lapetite.com":
+                return "La Petite Academy";
+            case "everbrookacademy.com":
+                return "Everbrook Academy";
+            case "creativekidslearningcenter.com":
+                return "Creative Kids Learning Center";
+            case "childtime.com":
+                return "Childtime Learning Centers";
+            case "childrenscourtyard.com":
+                return "The Children's Courtyard";
+            case "u-gro.com":
+                return "U-GRO";
+            case "learningcaregroup.com":
+                return ""; //todo
+            default:
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
+        }
+    }
+
+
     public static String getSchoolPageURL() {
         switch (TestConfig.domain)
         {
@@ -202,7 +231,7 @@ public class BrandDataSwitch {
         }
     }
 
-    public static String getLCGFYSsearch() {
+    public static String getLCGandB2Bsearch() {
         switch (TestConfig.domain) {
             case "tutortime.com":
                 return "garden plain";

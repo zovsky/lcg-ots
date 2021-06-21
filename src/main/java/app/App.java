@@ -14,6 +14,8 @@ public class App {
     public Footer footer;
     public NavUtility navUtility;
 
+    public B2BFYSPage b2bFYSPage;
+    public B2BFYSResultsPage b2bFYSResultsPage;
     public CampaignPage campaignPage;
     public DMAPage dmaPage;
     public FYSResultsPage fysResultsPage;
@@ -21,6 +23,7 @@ public class App {
     public InfantsPage infantsPage;
     public LoginPage loginPage;
     public LCGFYSPage lcgFYSPage;
+    public LCGFYSResultsPage lcgFYSResultsPage;
     public OTSframe otsFrame;
     public SchoolPage schoolPage;
 
@@ -31,20 +34,23 @@ public class App {
         footer = PageBuilder.buildFooter();
         navUtility = PageBuilder.buildNavUtility();
 
+        b2bFYSPage = PageBuilder.buildB2BFYSPage();
+        b2bFYSResultsPage = PageBuilder.buildB2BFYSResultsPage();
         campaignPage = PageBuilder.buildCampaignPage();
         dmaPage = PageBuilder.buildDmaPage();
         fysResultsPage = PageBuilder.buildFYSResultsPage();
         homePage = PageBuilder.buildHomePage();
         infantsPage = PageBuilder.buildInfantsPage();
         loginPage = PageBuilder.buildLoginPage();
-        lcgFYSPage = PageBuilder.buildLCGFYSResultsPage();
+        lcgFYSPage = PageBuilder.buildLCGFYSPage();
+        lcgFYSResultsPage = PageBuilder.buildLCGFYSResultsPage();
         otsFrame = PageBuilder.buildOTSFrame();
         schoolPage = PageBuilder.buildSchoolPage();
 
     }
 
-    public void openOTSfrom(String ots) {
-        switch (ots)
+    public void openOTSfrom(String startingLocator) {
+        switch (startingLocator)
         {
             case "eyebrow":
                 eyeBrow.otsEyebrow.click();
@@ -75,14 +81,16 @@ public class App {
                 break;
             case "dmahero":
                 dmaPage.otsDmaHero.click();
+                break;
             case "dmacardin":
                 dmaPage.otsDmaCard.click();
+                break;
             case "dmamapin":
                 dmaPage.otsDmaMap.click();
+                break;
             case "campaign":
                 campaignPage.otsCampaign.click();
-            case "lcgfyscard":
-                campaignPage.otsCampaign.click();
+                break;
         }
     }
 }

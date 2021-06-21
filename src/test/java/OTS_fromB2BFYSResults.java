@@ -6,10 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-
 @Listeners (value = AssumptionListener.class)
-public class OTS_fromLCGFYSResults extends A_BaseTest {
+public class OTS_fromB2BFYSResults extends A_BaseTest {
 
     public boolean allDomainsAllowed() {
         return true;
@@ -17,10 +15,11 @@ public class OTS_fromLCGFYSResults extends A_BaseTest {
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
     @Assumption(methods = "allDomainsAllowed")
-    public void t01_submitOTSfromLCGFYSCard() {
-        app.lcgFYSPage.open();
-        app.lcgFYSPage.searchForLocation();
-        Assert.assertTrue(app.lcgFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
+    public void t01_submitOTSfromB2BFYSCard() {
+        app.b2bFYSPage.open();
+        app.b2bFYSPage.selectBrand();
+        app.b2bFYSPage.searchForLocation();
+        Assert.assertTrue(app.b2bFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
@@ -28,11 +27,12 @@ public class OTS_fromLCGFYSResults extends A_BaseTest {
 
     @Test (enabled = true, retryAnalyzer = Retry.class)
     @Assumption(methods = "allDomainsAllowed")
-    public void t02_submitOTSfromLCGFYSMap() {
-        app.lcgFYSPage.open();
-        app.lcgFYSPage.searchForLocation();
-        Assert.assertTrue(app.lcgFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
-        app.lcgFYSResultsPage.openSchoolBalloon();
+    public void t02_submitOTSfromB2BFYSMap() {
+        app.b2bFYSPage.open();
+        app.b2bFYSPage.selectBrand(); //todo enable all b2b brands for dominos on stage
+        app.b2bFYSPage.searchForLocation();
+        Assert.assertTrue(app.b2bFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
+        app.b2bFYSResultsPage.openSchoolBalloon();
         app.openOTSfrom(otsStartLocation);
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();

@@ -47,4 +47,17 @@ public class OTS_fromDMAPageInBrand extends A_BaseTest {
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
+
+//    public boolean onlyDomainsThatHaveDMACrossBrand() {
+//        return true;
+//    }
+//
+//    @Test (enabled = true, retryAnalyzer = Retry.class)
+//    @Assumption(methods = "onlyDomainsThatHaveDMACrossBrand")
+//    public void t04_submitOTSfromSchoolCard() {
+//        app.dmaPage.open();
+//        app.openOTSfrom(otsStartLocation);
+//        app.otsFrame.switchToFrame();
+//        app.otsFrame.submitOTSwithSchoolPreselected();
+//    }
 }

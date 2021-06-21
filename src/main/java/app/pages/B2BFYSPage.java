@@ -5,22 +5,27 @@ import com.codeborne.selenide.SelenideElement;
 import helpers.BrandDataSwitch;
 import helpers.TestConfig;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 
-public class LCGFYSPage extends BasePage {
+public class B2BFYSPage extends BasePage {
 
     public SelenideElement locationField = $("#location");
+    public SelenideElement brandDropDown = $("#brand");
 
-    public LCGFYSPage(String pageUrl) {
+    public B2BFYSPage(String pageUrl) {
         super(pageUrl);
     }
 
     public void open() {
-        String url = TestConfig.env + "learningcaregroup.com/about-us/find-a-school/";
+        String url = TestConfig.env + "mylearningcaregroup.com/dominos/find-a-school/";
         Selenide.open(url);
     }
 
     public void searchForLocation() {
         locationField.setValue(BrandDataSwitch.getLCGandB2Bsearch()).submit();
+    }
+
+    public void selectBrand() {
+        brandDropDown.selectOption(BrandDataSwitch.getBrandForDropDown());
     }
 }

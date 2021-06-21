@@ -59,8 +59,20 @@ public class PageBuilder {
         return new CampaignPage(BrandDataSwitch.getCampaignPageURL());
     }
 
-    public static LCGFYSPage buildLCGFYSResultsPage() {
+    public static LCGFYSPage buildLCGFYSPage() {
         return new LCGFYSPage(TestConfig.env + "learningcaregroup.com/about-us/find-a-school/");
+    }
+
+    public static B2BFYSPage buildB2BFYSPage() {
+        return new B2BFYSPage(TestConfig.env + "learningcaregroup.com/about-us/find-a-school/");
+    }
+
+    public static LCGFYSResultsPage buildLCGFYSResultsPage() {
+        return new LCGFYSResultsPage("");
+    }
+
+    public static B2BFYSResultsPage buildB2BFYSResultsPage() {
+        return new B2BFYSResultsPage("");
     }
 }
 
