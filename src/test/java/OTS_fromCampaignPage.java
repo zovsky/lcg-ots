@@ -24,7 +24,7 @@ public class OTS_fromCampaignPage extends A_BaseTest {
     @Assumption(methods = "onlyDomainsThatHaveOTSOnCampaignPage")
     public void t01_submitOTSfromCampaignPage() {
         app.campaignPage.open();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //campaign
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithoutSchoolPreselected();
     }

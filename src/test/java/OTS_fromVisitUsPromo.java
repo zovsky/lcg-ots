@@ -26,7 +26,7 @@ public class OTS_fromVisitUsPromo extends A_BaseTest {
     @Assumption(methods = "onlyDomainsThatHaveVisitUsPromo")
     public void t01_submitOTSfromVisitUsPromo() {
         app.visitUsPromo.open();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //visitus
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithoutSchoolPreselected();
     }

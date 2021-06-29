@@ -24,7 +24,7 @@ public class OTS_Spanish extends A_BaseTest {
     @Assumption(methods = "onlyOnProdDomainsThatHaveSpanish")
     public void t01_submitSpanishOTS() {
         app.homePage.openSpanish();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //eyebrow
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithoutSchoolPreselected();
     }

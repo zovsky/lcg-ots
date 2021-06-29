@@ -15,7 +15,7 @@ public class OTS_fromFYSResults extends A_BaseTest {
     @Assumption(methods = "allDomainsAllowed")
     public void t01_submitOTSfromFYSCard() {
         app.fysResultsPage.open();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fyscard
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
@@ -25,7 +25,7 @@ public class OTS_fromFYSResults extends A_BaseTest {
     public void t02_submitOTSfromFYSMap() {
         app.fysResultsPage.open();
         app.fysResultsPage.openSchoolBalloon();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fysmap
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }

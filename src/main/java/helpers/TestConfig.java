@@ -9,7 +9,7 @@ public class TestConfig {
     public static String baseUrl = "https://qa.tutortime.com/";
 
     public static void initConfig() {
-        //mvn clean test -Dbrowser=chrome -Dheadless=0 -DsuiteXmlFile=ots.xml -Denv=qa -Ddomain=tt
+        //mvn clean test -Dbrowser=chrome -Dheadless=0 -DsuiteXmlFile=ots.xml -Denv=qa -Ddomain=lpa
         //debug: add -Dmaven.surefire.debug
 
         browser = System.getProperty("browser") == null ? "chrome" : System.getProperty("browser");

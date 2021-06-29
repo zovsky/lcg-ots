@@ -20,7 +20,7 @@ public class OTS_fromB2BFYSResults extends A_BaseTest {
         app.b2bFYSPage.selectBrand();
         app.b2bFYSPage.searchForLocation();
         Assert.assertTrue(app.b2bFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fyscard
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
@@ -33,7 +33,7 @@ public class OTS_fromB2BFYSResults extends A_BaseTest {
         app.b2bFYSPage.searchForLocation();
         Assert.assertTrue(app.b2bFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
         app.b2bFYSResultsPage.openSchoolBalloon();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fysmap
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }

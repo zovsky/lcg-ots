@@ -82,10 +82,13 @@ public class App {
             case "dmahero":
                 dmaPage.otsDmaHero.click();
                 break;
-            case "dmacardin":
+            case "dmacard":
                 dmaPage.otsDmaCard.click();
                 break;
-            case "dmamapin":
+            case "dmacardcrossbrand":
+                dmaPage.otsDmaCrossBrandCard.click();
+                break;
+            case "dmamap":
                 dmaPage.otsDmaMap.click();
                 break;
             case "campaign":

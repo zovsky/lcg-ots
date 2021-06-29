@@ -114,7 +114,7 @@
     <test name="DMA hero">
         <parameter name="otsStartLocation" value="dmahero" />
         <classes>
-            <class name="OTS_fromDMAPageInBrand" >
+            <class name="OTS_fromDMAPage" >
                 <methods>
                     <include name="t01_submitOTSfromDMAHero" />
                 </methods>
@@ -123,9 +123,9 @@
     </test>
 
     <test name="DMA school card in-brand">
-        <parameter name="otsStartLocation" value="dmacardin" />
+        <parameter name="otsStartLocation" value="dmacard" />
         <classes>
-            <class name="OTS_fromDMAPageInBrand" >
+            <class name="OTS_fromDMAPage" >
                 <methods>
                     <include name="t02_submitOTSfromSchoolCard" />
                 </methods>
@@ -134,9 +134,9 @@
     </test>
 
     <test name="DMA map in-brand">
-        <parameter name="otsStartLocation" value="dmamapin" />
+        <parameter name="otsStartLocation" value="dmamap" />
         <classes>
-            <class name="OTS_fromDMAPageInBrand" >
+            <class name="OTS_fromDMAPage" >
                 <methods>
                     <include name="t03_submitOTSfromMap" />
                 </methods>
@@ -197,27 +197,27 @@
     </test>
 
 
-<!--    <test name="DMA school card cross-brand">-->
-<!--        <parameter name="otsStartLocation" value="dmacardin" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromDMAPageCrossBrand" >-->
-<!--                <methods>-->
-<!--                    <include name="t01_submitOTSfromSchoolCard" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="DMA school card cross-brand">
+        <parameter name="otsStartLocation" value="dmacardcrossbrand" />
+        <classes>
+            <class name="OTS_fromDMAPage" >
+                <methods>
+                    <include name="t04_submitOTSfromSchoolCard" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
-<!--    <test name="DMA map cross-brand">-->
-<!--        <parameter name="otsStartLocation" value="dmamapin" />-->
-<!--        <classes>-->
-<!--            <class name="OTS_fromDMAPageCrossBrand" >-->
-<!--                <methods>-->
-<!--                    <include name="t02_submitOTSfromMap" />-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="DMA map cross-brand">
+        <parameter name="otsStartLocation" value="dmamap" />
+        <classes>
+            <class name="OTS_fromDMAPage" >
+                <methods>
+                    <include name="t05_submitOTSfromMap" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 
     <test name="Spanish Eyebrow">
         <parameter name="otsStartLocation" value="eyebrow" />

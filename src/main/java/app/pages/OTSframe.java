@@ -5,8 +5,12 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.BrandDataSwitch;
+import helpers.TestConfig;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.BrandDataSwitch.getEmailAddress;
@@ -122,23 +126,27 @@ public class OTSframe {
         clickNextConfirmSchoolButton();
         selectFirstAvailableTourType();
         selectTomorrow();
-        selectSecondTimeslot();
-        sleep(3000);
-        clickNextButtonCalendar();
-        fillOTSFormAndSubmit(); //todo uncomment
-        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-                "Thank You!");
+        if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will not submit the form on PROD
+            selectSecondTimeslot();
+            sleep(3000);
+            clickNextButtonCalendar();
+            fillOTSFormAndSubmit();
+            Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                    "Thank You!");
+        }
     }
 
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
         selectFirstAvailableTourType();
-        selectTomorrow();
-        selectSecondTimeslot();
-        sleep(3000);
-        clickNextButtonCalendar();
-        fillOTSFormAndSubmit(); //todo uncomment
-        Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
-                "Thank You!");
+        selectTomorrow(); //todo change to today
+        if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will not submit the form on PROD
+            selectSecondTimeslot();
+            sleep(3000);
+            clickNextButtonCalendar();
+            fillOTSFormAndSubmit();
+            Assert.assertEquals(thankYou.shouldBe(Condition.visible).getText(),
+                    "Thank You!");
+        }
     }
 }

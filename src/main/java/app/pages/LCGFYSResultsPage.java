@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class LCGFYSResultsPage extends FYSResultsPage {
+public class LCGFYSResultsPage extends FYSResultsPage { //todo refactor extensions
 
 //    public SelenideElement otsFYSResultsCard = $$(".locationCard").first().$(".scheduleLink.iframeLightBoxLink");
 //    public SelenideElement otsFYSResultsMap = $(".scheduleLink.gMapOTSlink");

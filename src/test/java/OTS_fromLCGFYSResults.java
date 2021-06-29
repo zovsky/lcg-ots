@@ -21,7 +21,7 @@ public class OTS_fromLCGFYSResults extends A_BaseTest {
         app.lcgFYSPage.open();
         app.lcgFYSPage.searchForLocation();
         Assert.assertTrue(app.lcgFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fyscard
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
@@ -33,7 +33,7 @@ public class OTS_fromLCGFYSResults extends A_BaseTest {
         app.lcgFYSPage.searchForLocation();
         Assert.assertTrue(app.lcgFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
         app.lcgFYSResultsPage.openSchoolBalloon();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //fysmap
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }

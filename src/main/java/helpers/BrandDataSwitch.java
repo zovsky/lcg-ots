@@ -253,4 +253,21 @@ public class BrandDataSwitch {
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
     }
+
+    public static String getCrossBrandForDMA() {
+        switch (TestConfig.domain) {
+            case "tutortime.com":                   return "u-gro.com";
+            case "pathwayslearningacademy.com":     return "tutortime.com";
+            case "montessori.com":                  return "childtime.com";
+            case "lapetite.com":                    return "childtime.com";
+            case "everbrookacademy.com":            return "lapetite.com";
+            case "creativekidslearningcenter.com":  return "lapetite.com";
+            case "childtime.com":                   return "childrenscourtyard.com";
+            case "childrenscourtyard.com":          return "tutortime.com";
+            case "u-gro.com":                       return "childrenscourtyard.com";
+            case "youngschool.com":                 return "lapetite.com";
+            default:
+                throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
+        }
+    }
 }

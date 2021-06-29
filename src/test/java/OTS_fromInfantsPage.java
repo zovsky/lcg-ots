@@ -27,7 +27,7 @@ public class OTS_fromInfantsPage extends A_BaseTest {
     @Assumption(methods = "onlyDomainsThatHaveOTSOnInfantsPage")
     public void t01_submitOTSfromInfantsPage() {
         app.infantsPage.open();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //infants
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithoutSchoolPreselected();
     }

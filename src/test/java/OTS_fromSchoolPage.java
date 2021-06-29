@@ -15,7 +15,7 @@ public class OTS_fromSchoolPage extends A_BaseTest {
     @Assumption(methods = "allDomains")
     public void t01_submitOTSfromSchoolPage() {
         app.schoolPage.open();
-        app.openOTSfrom(otsStartLocation);
+        app.openOTSfrom(otsStartLocation); //schoolinfo, twoctaspromo
         app.otsFrame.switchToFrame();
         app.otsFrame.submitOTSwithSchoolPreselected();
     }
