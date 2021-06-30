@@ -26,21 +26,10 @@ public class A_BaseTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-
-//        Object currentClass = result.getInstance();
-//        WebDriver webDriver = (Driver) currentClass.currentDriver();
-//
-//        if (webDriver != null)
-//        {
-//            System.out.println("Attaching a screenshot of the failed step");
-//            Allure.addAttachment("Screenshot of the failed step", new ByteArrayInputStream(((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES)));
-//        }
-        //Driver.takeScreenshot();
     }
 
     @Override
     public void onTestSkipped(ITestResult TestResult) {
-        //currentDriver().quit();
     }
 
     @Override

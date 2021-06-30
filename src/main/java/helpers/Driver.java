@@ -81,9 +81,6 @@ public class Driver {
             case "ug":
                 TestConfig.domain = "u-gro.com";
                 break;
-            case "lcg":
-                TestConfig.domain = "learningcaregroup.com";
-                break;
         }
 
         switch (TestConfig.env)
@@ -100,7 +97,6 @@ public class Driver {
         }
 
         TestConfig.baseUrl = TestConfig.env+TestConfig.domain;
-        //todo Spanish
 
     }
 

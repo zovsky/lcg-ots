@@ -72,8 +72,8 @@ public class OTS_flow extends A_BaseTest {
 
     public boolean onlyDomainsThatHaveInPersonTourType() {
         //todo check testng groups https://www.guru99.com/introduction-testng-groups.html
-        //skipped for PLA and EA on prod
-        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com").contains(TestConfig.domain) &&
+        //skipped for PLA, EA, UG on prod
+        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com", "u-gro.com").contains(TestConfig.domain) &&
             Arrays.asList("https://www.").contains(TestConfig.env)) {
             app.homePage.open();
             return false;
