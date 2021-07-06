@@ -101,14 +101,14 @@ public class BrandDataSwitch {
     public static String getFYSResultsPageURL() {
         switch (TestConfig.domain)
         {
-            case "tutortime.com":                   return  "/child-care-centers/find-a-school/search-results/?state=MN";
-            case "pathwayslearningacademy.com":     return "/locations";
+            case "tutortime.com":                   return "/child-care-centers/find-a-school/search-results/?state=MN";
+            case "pathwayslearningacademy.com":     return "/child-care-centers/find-a-school/search-results/?location=Indianapolis%2C+IN";
             case "montessori.com":                  return "/montessori-schools/find-a-school/search-results/?state=GA";
             case "lapetite.com":                    return "/child-care-centers/find-a-school/search-results/?location=87122";
             case "everbrookacademy.com":            return "/locations/find-a-school/search-results/?state=MI";
             case "creativekidslearningcenter.com":  return "/locations";
-            case "childtime.com":                   return "child-care-centers/find-a-school/search-results/?location=92126";
-            case "childrenscourtyard.com":          return "child-care-centers/find-a-school/search-results/?location=aurora%2C+il";
+            case "childtime.com":                   return "/child-care-centers/find-a-school/search-results/?location=92126";
+            case "childrenscourtyard.com":          return "/child-care-centers/find-a-school/search-results/?location=aurora%2C+il";
             case "u-gro.com":                       return "/locations";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);

@@ -58,7 +58,7 @@ public class OTSframe {
 
     public ElementsCollection firstTourTypeAvailable = $$(".icon-circle");
 
-    public void selectFirstAvailableTourType() { //todo select any tour type
+    public void selectFirstAvailableTourType() {
         if (firstTourTypeAvailable.first().is(Condition.visible))
             firstTourTypeAvailable.first().click();
         else firstTourTypeAvailable.get(1).click();
@@ -139,7 +139,7 @@ public class OTSframe {
     public void submitOTSwithSchoolPreselected() {
         clickNextConfirmSchoolButton();
         selectFirstAvailableTourType();
-        selectTomorrow(); //todo change to today
+        selectTomorrow();
         if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will not submit the form on PROD
             selectSecondTimeslot();
             sleep(3000);

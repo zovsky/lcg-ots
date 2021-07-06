@@ -29,7 +29,7 @@ public class OTS_fromB2BFYSResults extends A_BaseTest {
     @Assumption(methods = "allDomainsAllowed")
     public void t02_submitOTSfromB2BFYSMap() {
         app.b2bFYSPage.open();
-        app.b2bFYSPage.selectBrand(); //todo enable all b2b brands for dominos on stage
+        app.b2bFYSPage.selectBrand();
         app.b2bFYSPage.searchForLocation();
         Assert.assertTrue(app.b2bFYSResultsPage.schoolNameLink.getAttribute("href").contains(TestConfig.domain));
         app.b2bFYSResultsPage.openSchoolBalloon();
