@@ -182,7 +182,7 @@ public class Driver {
 
     public static void getBrowserLogs() { //List<LogEntry>
         if (TestConfig.browser.contains("chrome")) {
-            sleep(3000);
+            sleep(2000);
             LogEntries log = currentDriver().manage().logs().get(LogType.BROWSER);
             List<LogEntry> logList = log.getAll();
             System.out.println("!!!!!!!!!!!! Console logs");
