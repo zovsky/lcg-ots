@@ -182,10 +182,12 @@ public class Driver {
         if (TestConfig.browser.contains("chrome")) {
             LogEntries log = currentDriver().manage().logs().get(LogType.BROWSER);
             List<LogEntry> logList = log.getAll();
+            System.out.println("!!!!!!!!!!!! Console logs");
             for (LogEntry entry : logList) {
                 System.out.println(entry.getLevel() + " " + entry.getMessage());
                 Allure.addAttachment("Console log", entry.toString());
             }
+            System.out.println("!!!!!!!!!!!! Console logs");
         }
         //return logList;
     }
