@@ -6,72 +6,72 @@
         <listener class-name="A_BaseTestListener"/>
     </listeners>
 
-    <test name="Eyebrow">
-        <parameter name="otsStartLocation" value="eyebrow" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Eyebrow">-->
+<!--        <parameter name="otsStartLocation" value="eyebrow" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="NavUtil">
-        <parameter name="otsStartLocation" value="navutil" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="NavUtil">-->
+<!--        <parameter name="otsStartLocation" value="navutil" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Footer">
-        <parameter name="otsStartLocation" value="footer" />
-        <classes>
-            <class name="OTS_flow" >
-                <methods>
-                    <include name="t01_searchForLocation" />
-                    <include name="t02_selectSchoolFromList" />
-                    <include name="t03_confirmSelectedSchool" />
-                    <include name="t04_selectVirtualTour" />
-                    <include name="t05_selectInPersonTour" />
-                    <include name="t06_selectDateAndTime" />
-                    <include name="t07_fillForm" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Footer">-->
+<!--        <parameter name="otsStartLocation" value="footer" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_flow" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_searchForLocation" />-->
+<!--                    <include name="t02_selectSchoolFromList" />-->
+<!--                    <include name="t03_confirmSelectedSchool" />-->
+<!--                    <include name="t04_selectVirtualTour" />-->
+<!--                    <include name="t05_selectInPersonTour" />-->
+<!--                    <include name="t06_selectDateAndTime" />-->
+<!--                    <include name="t07_fillForm" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Program page">
-        <parameter name="otsStartLocation" value="infants" />
-        <classes>
-            <class name="OTS_fromInfantsPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Program page">-->
+<!--        <parameter name="otsStartLocation" value="infants" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromInfantsPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Visit Us promo">
-        <parameter name="otsStartLocation" value="visitus" />
-        <classes>
-            <class name="OTS_fromVisitUsPromo" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Visit Us promo">-->
+<!--        <parameter name="otsStartLocation" value="visitus" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromVisitUsPromo" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="School page info">
         <parameter name="otsStartLocation" value="schoolinfo" />
@@ -81,150 +81,150 @@
         </classes>
     </test>
 
-    <test name="School page 2 CTAs promo">
-        <parameter name="otsStartLocation" value="twoctaspromo" />
-        <classes>
-            <class name="OTS_fromSchoolPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="School page 2 CTAs promo">-->
+<!--        <parameter name="otsStartLocation" value="twoctaspromo" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromSchoolPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="FYS Card">
-        <parameter name="otsStartLocation" value="fyscard" />
-        <classes>
-            <class name="OTS_fromFYSResults" >
-                <methods>
-                    <include name="t01_submitOTSfromFYSCard" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="FYS Card">-->
+<!--        <parameter name="otsStartLocation" value="fyscard" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_submitOTSfromFYSCard" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="FYS Map">
-        <parameter name="otsStartLocation" value="fysmap" />
-        <classes>
-            <class name="OTS_fromFYSResults" >
-                <methods>
-                    <include name="t02_submitOTSfromFYSMap" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="FYS Map">-->
+<!--        <parameter name="otsStartLocation" value="fysmap" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t02_submitOTSfromFYSMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="DMA hero">
-        <parameter name="otsStartLocation" value="dmahero" />
-        <classes>
-            <class name="OTS_fromDMAPage" >
-                <methods>
-                    <include name="t01_submitOTSfromDMAHero" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="DMA hero">-->
+<!--        <parameter name="otsStartLocation" value="dmahero" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPage" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_submitOTSfromDMAHero" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="DMA school card in-brand">
-        <parameter name="otsStartLocation" value="dmacard" />
-        <classes>
-            <class name="OTS_fromDMAPage" >
-                <methods>
-                    <include name="t02_submitOTSfromSchoolCard" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="DMA school card in-brand">-->
+<!--        <parameter name="otsStartLocation" value="dmacard" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPage" >-->
+<!--                <methods>-->
+<!--                    <include name="t02_submitOTSfromSchoolCard" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="DMA map in-brand">
-        <parameter name="otsStartLocation" value="dmamap" />
-        <classes>
-            <class name="OTS_fromDMAPage" >
-                <methods>
-                    <include name="t03_submitOTSfromMap" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="DMA map in-brand">-->
+<!--        <parameter name="otsStartLocation" value="dmamap" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPage" >-->
+<!--                <methods>-->
+<!--                    <include name="t03_submitOTSfromMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Campaign page">
-        <parameter name="otsStartLocation" value="campaign" />
-        <classes>
-            <class name="OTS_fromCampaignPage" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Campaign page">-->
+<!--        <parameter name="otsStartLocation" value="campaign" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromCampaignPage" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="LCG FYS Card">
-        <parameter name="otsStartLocation" value="fyscard" />
-        <classes>
-            <class name="OTS_fromLCGFYSResults" >
-                <methods>
-                    <include name="t01_submitOTSfromLCGFYSCard" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="LCG FYS Card">-->
+<!--        <parameter name="otsStartLocation" value="fyscard" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromLCGFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_submitOTSfromLCGFYSCard" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="LCG FYS Map">
-        <parameter name="otsStartLocation" value="fysmap" />
-        <classes>
-            <class name="OTS_fromLCGFYSResults" >
-                <methods>
-                    <include name="t02_submitOTSfromLCGFYSMap" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="LCG FYS Map">-->
+<!--        <parameter name="otsStartLocation" value="fysmap" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromLCGFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t02_submitOTSfromLCGFYSMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="B2B FYS Card">
-        <parameter name="otsStartLocation" value="fyscard" />
-        <classes>
-            <class name="OTS_fromB2BFYSResults" >
-                <methods>
-                    <include name="t01_submitOTSfromB2BFYSCard" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="B2B FYS Card">-->
+<!--        <parameter name="otsStartLocation" value="fyscard" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromB2BFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t01_submitOTSfromB2BFYSCard" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="B2B FYS Map">
-        <parameter name="otsStartLocation" value="fysmap" />
-        <classes>
-            <class name="OTS_fromB2BFYSResults" >
-                <methods>
-                    <include name="t02_submitOTSfromB2BFYSMap" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="B2B FYS Map">-->
+<!--        <parameter name="otsStartLocation" value="fysmap" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromB2BFYSResults" >-->
+<!--                <methods>-->
+<!--                    <include name="t02_submitOTSfromB2BFYSMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
-    <test name="DMA school card cross-brand">
-        <parameter name="otsStartLocation" value="dmacardcrossbrand" />
-        <classes>
-            <class name="OTS_fromDMAPage" >
-                <methods>
-                    <include name="t04_submitOTSfromSchoolCard" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="DMA school card cross-brand">-->
+<!--        <parameter name="otsStartLocation" value="dmacardcrossbrand" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPage" >-->
+<!--                <methods>-->
+<!--                    <include name="t04_submitOTSfromSchoolCard" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="DMA map cross-brand">
-        <parameter name="otsStartLocation" value="dmamap" />
-        <classes>
-            <class name="OTS_fromDMAPage" >
-                <methods>
-                    <include name="t05_submitOTSfromMap" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="DMA map cross-brand">-->
+<!--        <parameter name="otsStartLocation" value="dmamap" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_fromDMAPage" >-->
+<!--                <methods>-->
+<!--                    <include name="t05_submitOTSfromMap" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Spanish Eyebrow">
-        <parameter name="otsStartLocation" value="eyebrow" />
-        <classes>
-            <class name="OTS_Spanish" >
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Spanish Eyebrow">-->
+<!--        <parameter name="otsStartLocation" value="eyebrow" />-->
+<!--        <classes>-->
+<!--            <class name="OTS_Spanish" >-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>
