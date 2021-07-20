@@ -17,6 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 public class Driver {
 
     public static void initDriver() {
@@ -180,6 +182,7 @@ public class Driver {
 
     public static void getBrowserLogs() { //List<LogEntry>
         if (TestConfig.browser.contains("chrome")) {
+            sleep(3000);
             LogEntries log = currentDriver().manage().logs().get(LogType.BROWSER);
             List<LogEntry> logList = log.getAll();
             System.out.println("!!!!!!!!!!!! Console logs");
