@@ -9,7 +9,6 @@ import helpers.TestConfig;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -69,14 +68,14 @@ public class OTSframe {
     //step5 calendar
     public SelenideElement selectedSchoolName = $$(".selected-school-name").first();
     public SelenideElement tomorrow = $$("a.ui-state-default").get(1);
-    public SelenideElement secondTimeslot = $(".timeslots").$$("a.timeslot").get(1);
+    public SelenideElement firstTimeslot = $(".timeslots").$$("a.timeslot").first();
     public SelenideElement nextButtonCalendar = $("#date-time-form").$(".backNextWrapper").$(".nextLink");
     public void selectTomorrow() {
         tomorrow.click();
         sleep(1000);
     }
-    public void selectSecondTimeslot() {
-        secondTimeslot.click();
+    public void selectFirstTimeslot() {
+        firstTimeslot.click();
     }
     public void clickNextButtonCalendar() {
         nextButtonCalendar.click();
@@ -127,7 +126,7 @@ public class OTSframe {
         selectFirstAvailableTourType();
         selectTomorrow();
         if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will not submit the form on PROD
-            selectSecondTimeslot();
+            selectFirstTimeslot();
             sleep(3000);
             clickNextButtonCalendar();
             fillOTSFormAndSubmit();
@@ -141,7 +140,7 @@ public class OTSframe {
         selectFirstAvailableTourType();
         selectTomorrow();
         if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will not submit the form on PROD
-            selectSecondTimeslot();
+            selectFirstTimeslot();
             sleep(3000);
             clickNextButtonCalendar();
             fillOTSFormAndSubmit();

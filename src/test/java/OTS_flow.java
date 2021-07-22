@@ -113,7 +113,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.selectFirstAvailableTourType();
         app.otsFrame.selectTomorrow();
         Assert.assertTrue(app.otsFrame.nextButtonCalendar.shouldBe(Condition.visible).is(Condition.disabled));
-        app.otsFrame.selectSecondTimeslot();
+        app.otsFrame.selectFirstTimeslot();
         Assert.assertTrue(app.otsFrame.nextButtonCalendar.is(Condition.enabled));
         if (!Arrays.asList("https://www.").contains(TestConfig.env)) { //will proceed on PROD
             sleep(3000);
@@ -144,7 +144,7 @@ public class OTS_flow extends A_BaseTest {
         app.otsFrame.clickNextConfirmSchoolButton();
         app.otsFrame.selectFirstAvailableTourType();
         app.otsFrame.selectTomorrow();
-        app.otsFrame.selectSecondTimeslot();
+        app.otsFrame.selectFirstTimeslot();
         sleep(3000);
         app.otsFrame.clickNextButtonCalendar();
         app.otsFrame.fillOTSFormAndSubmit();
