@@ -18,6 +18,7 @@ public class BrandDataSwitch {
             case "childtime.com":                       return "Childtime Learning Centers";
             case "childrenscourtyard.com":              return "The Children's Courtyard";
             case "u-gro.com":                           return "U-GRO";
+            case "youngschool.com":                     return "Young School";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -36,6 +37,7 @@ public class BrandDataSwitch {
             case "childtime.com":                       return "/your-local-school/silverdale-wa-0902";
             case "childrenscourtyard.com":              return "/your-local-school/dupont-wa-3220/";
             case "u-gro.com":                           return "/4832";
+            case "youngschool.com":                     return "/4848";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -61,6 +63,8 @@ public class BrandDataSwitch {
                 return "CCY_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             case "u-gro.com":
                 return "UG_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
+            case "youngschool.com":
+                return "YS_" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + "@example.com";
             default:
                 return "";
         }
@@ -77,6 +81,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "Childtime of San Diego, CA";
             case "childrenscourtyard.com":          return "The Children's Courtyard of Aurora, IL";
             case "u-gro.com":                       return "U-Gro of Lititz, PA";
+            case "youngschool.com":                 return "The Young Schools of Ellicott City, MD";
             default:
                 return "Error: no brand";
         }
@@ -93,6 +98,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "To confirm and schedule your Childtime of San Diego, CA";
             case "childrenscourtyard.com":          return "To confirm and schedule your The Children's Courtyard of Aurora, IL";
             case "u-gro.com":                       return "To confirm and schedule your U-Gro of Lititz, PA";
+            case "youngschool.com":                 return "To confirm and schedule your The Young Schools of Ellicott City, MD";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -110,6 +116,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "/child-care-centers/find-a-school/search-results/?location=92126";
             case "childrenscourtyard.com":          return "/child-care-centers/find-a-school/search-results/?location=aurora%2C+il";
             case "u-gro.com":                       return "/locations";
+            case "youngschool.com":                 return "/child-care-centers/locations";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -126,6 +133,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "92126";
             case "childrenscourtyard.com":          return "Aurora, IL";
             case "u-gro.com":                       return "PA";
+            case "youngschool.com":                 return "MD";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -142,6 +150,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "/area/akron/";
             case "childrenscourtyard.com":          return "/area/austin-round-rock/";
             case "u-gro.com":                       return "/area/harrisburg/";
+            case "youngschool.com":                 return "/area/baltimore-towson/";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -158,6 +167,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "/campaign/aiss/";
             case "childrenscourtyard.com":          return "/campaign/aiss/";
             case "u-gro.com":                       return "n/a";
+            case "youngschool.com":                 return "n/a";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
@@ -174,6 +184,7 @@ public class BrandDataSwitch {
             case "childtime.com":                   return "renton";
             case "childrenscourtyard.com":          return "80530";
             case "u-gro.com":                       return "lititz";
+            case "youngschool.com":                 return "Westminster, MD";
             default:
                 throw new IllegalStateException("Unexpected value: " + TestConfig.domain);
         }
