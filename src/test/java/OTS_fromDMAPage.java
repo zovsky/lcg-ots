@@ -14,7 +14,7 @@ public class OTS_fromDMAPage extends A_BaseTest {
 
     public boolean onlyDomainsThatHaveDMAInBrand() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com", "childrenscourtyard.com", "montessori.com",
-                "everbrookacademy.com", "u-gro.com")
+                "everbrookacademy.com", "u-gro.com", "youngschool.com")
                 .contains(TestConfig.domain)) return true;
         else {
             app.homePage.open();

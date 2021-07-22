@@ -83,6 +83,9 @@ public class Driver {
             case "ug":
                 TestConfig.domain = "u-gro.com";
                 break;
+            case "ys":
+                TestConfig.domain = "youngschool.com";
+                break;
         }
 
         switch (TestConfig.env)
