@@ -8,6 +8,8 @@ import app.pages.*;
 import helpers.BrandDataSwitch;
 import helpers.TestConfig;
 
+import java.util.Arrays;
+
 public class PageBuilder {
 
     public static LoginPage buildLoginPage() {
@@ -39,7 +41,7 @@ public class PageBuilder {
     }
 
     public static VisitUsPromo buildVisitUsPromo() { //TT LPA CK CT CCY
-        if (TestConfig.domain.contains("lapetite.com")) return new VisitUsPromo("/child-care-centers");
+        if (Arrays.asList("lapetite.com", "youngschool.com").contains(TestConfig.domain)) return new VisitUsPromo("/child-care-centers");
         else return new VisitUsPromo("/education");
     }
 
