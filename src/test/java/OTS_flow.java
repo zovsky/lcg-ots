@@ -71,9 +71,12 @@ public class OTS_flow extends A_BaseTest {
     }
 
     public boolean onlyDomainsThatHaveInPersonTourType() {
-        //skipped for PLA, EA, UG on prod
-        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com", "u-gro.com").contains(TestConfig.domain) &&
-            Arrays.asList("https://www.").contains(TestConfig.env)) {
+        //skipped for PLA, EA, UG on prod || YS on all envs
+        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com", "u-gro.com").contains(TestConfig.domain)
+                &&
+                Arrays.asList("https://www.").contains(TestConfig.env)
+                ||
+                Arrays.asList("youngschool.com").contains(TestConfig.domain)) {
             app.homePage.open();
             return false;
         }

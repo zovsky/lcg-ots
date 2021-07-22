@@ -14,7 +14,7 @@ public class OTS_fromVisitUsPromo extends A_BaseTest {
 
     public boolean onlyDomainsThatHaveVisitUsPromo() {
         if (Arrays.asList("lapetite.com", "tutortime.com", "childtime.com",
-                "childrenscourtyard.com", "creativekidslearningcenter.com")
+                "childrenscourtyard.com", "creativekidslearningcenter.com", "youngschool.com")
                 .contains(TestConfig.domain)) return true;
         else {
             app.homePage.open();
