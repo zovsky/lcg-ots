@@ -71,8 +71,9 @@ public class OTS_flow extends A_BaseTest {
     }
 
     public boolean onlyDomainsThatHaveInPersonTourType() {
-        //skipped for PLA, EA, UG on prod || YS on all envs
-        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com", "u-gro.com").contains(TestConfig.domain)
+        //skipped for PLA, EA, UG, CK on prod || YS on all envs
+        if (Arrays.asList("pathwayslearningacademy.com", "everbrookacademy.com", "u-gro.com", "creativekidslearningcenter.com")
+                .contains(TestConfig.domain)
                 &&
                 Arrays.asList("https://www.").contains(TestConfig.env)
                 ||

@@ -35,7 +35,7 @@ public class BrandDataSwitch {
             case "everbrookacademy.com":                return "/our-schools/chicago-il-4809";
             case "creativekidslearningcenter.com":      return "/schools/las-vegas-nv-6701";
             case "childtime.com":                       return "/your-local-school/silverdale-wa-0902";
-            case "childrenscourtyard.com":              return "/your-local-school/dupont-wa-3220/";
+            case "childrenscourtyard.com":              return "/your-local-school/lacey-wa-3222/";
             case "u-gro.com":                           return "/4832";
             case "youngschool.com":                     return "/4848";
             default:
