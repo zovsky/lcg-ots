@@ -1,10 +1,21 @@
 package app.pages;
 
+import com.codeborne.selenide.ClickOptions;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.ex.ElementIsNotClickableException;
+import com.codeborne.selenide.ex.UIAssertionError;
 import helpers.BrandDataSwitch;
 import helpers.TestConfig;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.WebElement;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -19,15 +30,19 @@ public class DMAPage extends BasePage {
     public SelenideElement locationField = $("#location");
     public SelenideElement fysSearchBtn = $("#fysSearchBtn");
     public SelenideElement crossBrandCardLetter = $$(".locationCard.crossBrand").first().$(".pinLabel");
-
+    public SelenideElement crossBrandCheckBox = $("#searchInAllBrands");
 
     public DMAPage(String pageUrl) {
         super(pageUrl);
     }
 
     public void openSchoolBalloonPinA() {
+        if (TestConfig.domain.contains("youngschool.com")) {
+            crossBrandCheckBox.click();
+        }
         sleep(2000);
         pinA.click();
+        sleep(500);
     }
 
     public void openSchoolBalloonCrossBrand() {

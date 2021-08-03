@@ -40,8 +40,9 @@ public class PageBuilder {
         return new InfantsPage("/educational-programs/curriculum/infants/");
     }
 
-    public static VisitUsPromo buildVisitUsPromo() { //TT LPA CK CT CCY
-        if (Arrays.asList("lapetite.com", "youngschool.com").contains(TestConfig.domain)) return new VisitUsPromo("/child-care-centers");
+    public static VisitUsPromo buildVisitUsPromo() { //TT LPA CK CT CCY YS
+        if (Arrays.asList("lapetite.com").contains(TestConfig.domain)) return new VisitUsPromo("/child-care-centers");
+        else if (Arrays.asList("youngschool.com").contains(TestConfig.domain)) return new VisitUsPromo("/education/teachers");
         else return new VisitUsPromo("/education");
     }
 
